@@ -1,57 +1,45 @@
-# importing the required libraries/modules
 from tkinter import *
-from pathlib import Path
-
-
-def relative_to_assets(path: str) -> Path:
-    return ASSETS_PATH / Path(path)
-
-
-def get_username():
-    Name = entry_Name.get()
-    #if Name is '':
-    clear_entries()
-
-def clear_entries():
-    entry_Name.delete(0, END)
+from HomePage import HomePage as hp
+from StartPage import StartPage as sp
 
 
 # class for the main frame
+class MainFrame(Tk):
+    # init method of the class Mainframe
+    def __init__(self, *args, **kwargs):
+        # init method of the tk class
+        Tk.__init__(self, *args, **kwargs)
 
-# path file for the assets
-OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path("./Start page/assets")
+        self.geometry("1360x800")
+        self.resizable(False, False)
+
+        # creating a container for all
+        container = Frame(self)
+        container.pack(side="top", fill="both", expand=True)
+        container.grid_rowconfigure(0, weight=1)
+        container.grid_columnconfigure(0, weight=1)
+
+        # creating a dictionary for page objects
+        self.frames = {}
+
+        # looping in every page/class and creating an object of it
+        # then storing the class name as the key
+        # and the object of it as the value
+        for f in {sp.StartPage, hp.HomePage}:
+            page_name = f.__name__
+            frame = f(container, self)
+            frame.grid(row=0, column=0, sticky="NSEW")
+            self.frames[page_name] = frame
+
+        self.show_frame("StartPage")
+
+    # showing the current frame above everything
+    def show_frame(self, page_name, name=None):
+        self.name = name
+        self.frames[page_name].tkraise()
+
 
 # initialize main window app
-window = Tk()
-window.geometry("1360x800")
-window.configure(bg="#FFFFFF")
-
-# creating the whole canvas of the frame
-canvas = Canvas(window, bg="#FFFFFF", height=800, width=1360, bd=0, highlightthickness=0, relief="ridge")
-canvas.place(x=0, y=0)
-
-# creating the background design for start page
-image_bg = PhotoImage(file=relative_to_assets("bg.png"))
-canvas.create_image(680.0, 401.0, image=image_bg)
-
-# creating the background design for the name entry
-image_bgEntry = PhotoImage(file=relative_to_assets("bgEntry.png"))
-canvas.create_image(679.0, 276.0, image=image_bgEntry)
-
-# creating name of the user entry
-entry_imgName = PhotoImage(file=relative_to_assets("entry_Name.png"))
-canvas.create_image(682.5, 420.5, image=entry_imgName)
-entry_Name = Entry(bd=0, bg="#D6EBF6", fg="#000716", highlightthickness=0)
-entry_Name.place(x=437.0, y=400.0, width=491.0, height=39.0)
-
-# creating the submit button
-button_imgSubmit = PhotoImage(file=relative_to_assets("Submit.png"))
-button_Submit = Button(image=button_imgSubmit, borderwidth=0, highlightthickness=0,
-                       command=lambda: get_username(), relief="flat")
-button_Submit.place(x=638.0, y=469.0, width=113.0, height=40.0)
-
-window.resizable(False, False)
+window = MainFrame()
 window.mainloop()
-
 
