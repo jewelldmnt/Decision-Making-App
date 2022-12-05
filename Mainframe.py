@@ -2,19 +2,27 @@
 from tkinter import *
 from pathlib import Path
 
+
+def relative_to_assets(path: str) -> Path:
+    return ASSETS_PATH / Path(path)
+
+
+def get_username():
+    Name = entry_Name.get()
+    #if Name is '':
+    clear_entries()
+
+def clear_entries():
+    entry_Name.delete(0, END)
+
+
 # class for the main frame
 
 # path file for the assets
 OUTPUT_PATH = Path(__file__).parent
 ASSETS_PATH = OUTPUT_PATH / Path("./Start page/assets")
 
-
-def relative_to_assets(path: str) -> Path:
-    return ASSETS_PATH / Path(path)
-
-
 # initialize main window app
-
 window = Tk()
 window.geometry("1360x800")
 window.configure(bg="#FFFFFF")
@@ -43,13 +51,7 @@ button_Submit = Button(image=button_imgSubmit, borderwidth=0, highlightthickness
                        command=lambda: get_username(), relief="flat")
 button_Submit.place(x=638.0, y=469.0, width=113.0, height=40.0)
 
-def get_username():
-    Name = entry_Name.get()
-    #if Name is '':
-    clear_entries()
-
-def clear_entries():
-    entry_Name.delete(0, END)
-
 window.resizable(False, False)
 window.mainloop()
+
+
