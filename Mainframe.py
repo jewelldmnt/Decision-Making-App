@@ -14,32 +14,37 @@ class MainFrame(Tk):
         self.resizable(False, False)
 
         # creating a container for all
-        container = Frame(self)
-        container.pack(side="top", fill="both", expand=True)
-        container.grid_rowconfigure(0, weight=1)
-        container.grid_columnconfigure(0, weight=1)
+        self.container = Frame(self)
+        self.container.pack(side="top", fill="both", expand=True)
+        self.container.grid_rowconfigure(0, weight=1)
+        self.container.grid_columnconfigure(0, weight=1)
 
         # creating a dictionary for page objects
         self.frames = {}
+        self.name = ''
 
         # looping in every page/class and creating an object of it
         # then storing the class name as the key
         # and the object of it as the value
         for f in {sp.StartPage, hp.HomePage}:
             page_name = f.__name__
-            frame = f(container, self)
-            frame.grid(row=0, column=0, sticky="NSEW")
-            self.frames[page_name] = frame
-
+            self._frame = f(self.container, self)
+            self._frame.grid(row=0, column=0, sticky="NSEW")
+            self.frames[page_name] = self._frame
         self.show_frame("StartPage")
 
     # showing the current frame above everything
     def show_frame(self, page_name, name=None):
         self.name = name
+        if page_name == "HomePage":
+            pg = hp.HomePage.__name__
+            self._frame = hp.HomePage(self.container, self)
+            self._frame.grid(row=0, column=0, sticky="NSEW")
+            self.frames[pg] = self._frame
         self.frames[page_name].tkraise()
 
 
 # initialize main window app
 window = MainFrame()
+window.title("StrGuide")
 window.mainloop()
-

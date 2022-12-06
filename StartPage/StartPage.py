@@ -2,7 +2,6 @@ from tkinter import *
 from pathlib import Path
 import pygame
 
-
 # Frame for start page
 class StartPage(Frame):
     # constants
@@ -70,8 +69,8 @@ class StartPage(Frame):
             self.errorMsg["text"] = "This field is required."
             self.entry_img["image"] = self.img_error
             return
+        controller.show_frame("HomePage", name)
         self.clear_entries()
-        controller.show_frame("HomePage")
 
     # function for clearing entries
     def clear_entries(self):

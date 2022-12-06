@@ -67,7 +67,7 @@ class HomePage(Frame):
 
         # creating the "Hi User" text
         self.myFont = Font(family="Nanum Pen", size=25 * -1)
-        canvas.create_text(136.0, 33.0, anchor="nw", text=f"Hi", fill="#000000", font=self.myFont)
+        canvas.create_text(136.0, 33.0, anchor="nw", text=f"Hi, {controller.name}", fill="#000000", font=self.myFont)
 
         # creating the image for sound
         self.is_on = True
