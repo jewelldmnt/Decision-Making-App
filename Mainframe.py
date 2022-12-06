@@ -1,6 +1,8 @@
+import sys
 from tkinter import *
-from HomePage import HomePage as hp
-from StartPage import StartPage as sp
+from StartPage import StartPage
+from HomePage import HomePage
+from StrandPage import StrandPage
 
 
 # class for the main frame
@@ -10,6 +12,7 @@ class MainFrame(Tk):
         # init method of the tk class
         Tk.__init__(self, *args, **kwargs)
 
+        # setting the default screen size
         self.geometry("1360x800")
         self.resizable(False, False)
 
@@ -19,32 +22,29 @@ class MainFrame(Tk):
         self.container.grid_rowconfigure(0, weight=1)
         self.container.grid_columnconfigure(0, weight=1)
 
-        # creating a dictionary for page objects
-        self.frames = {}
         self.name = ''
+        self.strand = ''
 
-        # looping in every page/class and creating an object of it
-        # then storing the class name as the key
-        # and the object of it as the value
-        for f in {sp.StartPage, hp.HomePage}:
-            page_name = f.__name__
-            self._frame = f(self.container, self)
-            self._frame.grid(row=0, column=0, sticky="NSEW")
-            self.frames[page_name] = self._frame
+        # calling the first screen
         self.show_frame("StartPage")
 
     # showing the current frame above everything
-    def show_frame(self, page_name, name=None):
+    def show_frame(self, page_name, name=None, strand=None):
         self.name = name
-        if page_name == "HomePage":
-            pg = hp.HomePage.__name__
-            self._frame = hp.HomePage(self.container, self)
-            self._frame.grid(row=0, column=0, sticky="NSEW")
-            self.frames[pg] = self._frame
-        self.frames[page_name].tkraise()
+        self.strand = strand
+
+        # converting a str into class
+        f = getattr(sys.modules[__name__], page_name)
+
+        # raising a specific frame
+        frame = f(self.container, self)
+        frame.grid(row=0, column=0, sticky="NSEW")
+        frame.tkraise()
 
 
 # initialize main window app
 window = MainFrame()
 window.title("StrGuide")
+icon = PhotoImage(file='icon.png')
+window.iconphoto(True, icon)
 window.mainloop()
