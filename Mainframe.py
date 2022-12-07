@@ -1,8 +1,8 @@
 import sys
 from tkinter import *
-from StartPage import StartPage
-from HomePage import HomePage
-from StrandPage import StrandPage
+from StartPage.StartPage import StartPage
+from HomePage.HomePage import HomePage
+from StrandPage.StrandPage import StrandPage
 
 
 # class for the main frame
@@ -33,7 +33,7 @@ class MainFrame(Tk):
         self.name = name
         self.strand = strand
 
-        # converting a str into class
+        # converting the page_name str into class
         f = getattr(sys.modules[__name__], page_name)
 
         # raising a specific frame

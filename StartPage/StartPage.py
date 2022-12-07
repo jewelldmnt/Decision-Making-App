@@ -7,7 +7,7 @@ class StartPage(Frame):
     # constants
     pygame.mixer.init()
     OUTPUT_PATH = Path(__file__).parent
-    ASSETS_PATH = OUTPUT_PATH / Path("StartPage_assets/assets")
+    ASSETS_PATH = OUTPUT_PATH / Path("./assets")
 
     # start page class init method
     def __init__(self, parent, controller):
@@ -17,7 +17,7 @@ class StartPage(Frame):
         self.img_error = PhotoImage(file=self.relative_to_assets("error.png"))
 
         # creating the whole canvas of the frame
-        canvas = Canvas(self, bg="#FFFFFF", height=800, width=1360, bd=0, highlightthickness=0, relief="ridge")
+        canvas = Canvas(self, height=800, width=1360, bd=0, highlightthickness=0, relief="ridge")
         canvas.place(x=0, y=0)
 
         # creating the background design for start page
@@ -83,7 +83,7 @@ class StartPage(Frame):
 
     # for playing the music
     def play(self):
-        pygame.mixer.music.load("StartPage_assets/assets/song.mp3")
+        pygame.mixer.music.load("StartPage/assets/song.mp3")
         pygame.mixer.music.set_volume(0.3)
         pygame.mixer.music.play(loops=5)
 

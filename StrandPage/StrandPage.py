@@ -8,7 +8,7 @@ class StrandPage(Frame):
     # constants
     pygame.mixer.init()
     OUTPUT_PATH = Path(__file__).parent
-    ASSETS_PATH = OUTPUT_PATH / Path("StrandPage_assets/assets")
+    ASSETS_PATH = OUTPUT_PATH / Path("./assets")
 
     # start page class init method
     def __init__(self, parent, controller):
@@ -69,19 +69,19 @@ class StrandPage(Frame):
     def show_strand(self, controller):
         strand = controller.strand
         if strand == "ABM":
-            self.canvas.create_image(139.0, 440.0, image=self.image_ABM_bg)
+            self.canvas.create_image(134.0, 442.0, image=self.image_ABM_bg)
         elif strand == "STEM":
             self.canvas.create_image(1226.0, 442.0, image=self.image_STEM_bg)
         elif strand == "GAS":
-            self.canvas.create_image(408.01043701171875, 441.0, image=self.image_GAS_bg)
+            self.canvas.create_image(408.01043701171875, 442.0, image=self.image_GAS_bg)
         elif strand == "HUMSS":
-            self.canvas.create_image(682.96728515625, 443.0, image=self.image_HUMSS_bg)
+            self.canvas.create_image(682.96728515625, 442.0, image=self.image_HUMSS_bg)
         elif strand == "ICT":
-            self.canvas.create_image(959.0, 441.0, image=self.image_ICT_bg)
+            self.canvas.create_image(959.0, 442.0, image=self.image_ICT_bg)
 
     # for playing the music
     def play(self):
-        pygame.mixer.music.load("StartPage_assets/assets/song.mp3")
+        pygame.mixer.music.load("StartPage/assets/song.mp3")
         pygame.mixer.music.set_volume(0.3)
         pygame.mixer.music.play(loops=5)
 

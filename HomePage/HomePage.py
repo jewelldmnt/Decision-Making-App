@@ -9,17 +9,17 @@ class HomePage(Frame):
     # constants
     pygame.mixer.init()
     OUTPUT_PATH = Path(__file__).parent
-    ASSETS_PATH = OUTPUT_PATH / Path("HomePage_assets/assets")
+    ASSETS_PATH = OUTPUT_PATH / Path("./assets")
 
     # sign in page class init method
     def __init__(self, parent, controller):
         Frame.__init__(self, parent)
 
         # creating the whole canvas of the frame
-        canvas = Canvas(self, bg="#B5E2FA", height=800, width=1360, bd=0, highlightthickness=0, relief="ridge")
+        canvas = Canvas(self, height=800, width=1360, bd=0, highlightthickness=0, relief="ridge")
         canvas.place(x=0, y=0)
 
-        # creating the background design for HomePage_assets
+        # creating the background design for HomePage
         self.image_bg = PhotoImage(file=self.relative_to_assets("bg.png"))
         canvas.create_image(680.0, 400.0, image=self.image_bg)
 
@@ -86,7 +86,7 @@ class HomePage(Frame):
 
     # for playing the sound
     def play(self):
-        pygame.mixer.music.load("HomePage_assets/assets/song.mp3")
+        pygame.mixer.music.load("HomePage/assets/song.mp3")
         pygame.mixer.music.set_volume(0.3)
         pygame.mixer.music.play(loops=5)
 
