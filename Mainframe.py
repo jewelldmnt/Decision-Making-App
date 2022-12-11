@@ -34,45 +34,27 @@ class MainFrame(Tk):
                        "GAS": 0}
 
         # skills for STEM
-        self.skills = {"STEM": [{"Problem Solving": 0},
-                                {"Math-Science": 0},
-                                {"Innovative": 0}],
+        self.skills = {
+                        "STEM": {"Problem Solving": 0,
+                                 "Math-Science": 0,
+                                 "Innovative": 0},
 
-                       "ABM": [{"Business Communication": 0},
-                               {"Financial Management": 0},
-                               {"Business": 0}],
+                        "ABM": {"Business Communication": 0,
+                                "Financial Management": 0,
+                                "Business": 0},
 
-                       "HUMSS": [{"Communication": 0},
-                                 {"Creativity": 0},
-                                 {"Social and Cultural Awareness": 0}],
+                        "HUMSS": {"Communication": 0,
+                                  "Creativity": 0,
+                                  "Social and Cultural Awareness": 0},
 
-                       "ICT": [{"Innovative": 0},
-                               {"Computer": 0},
-                               {"Marketing and Video Editing": 0}],
+                        "ICT": {"Innovative": 0,
+                                "Computer": 0,
+                                "Marketing and Video Editing": 0},
 
-                       "GAS": [{"Adaptability": 0},
-                               {"Presentation": 0},
-                               {"Technical": 0}]}
-
-        # skills for ABM
-        self.ABM_skills = [{"Business Communication": 0},
-                           {"Financial Management": 0},
-                           {"Business": 0}]
-
-        # skills for HUMSS
-        self.HUMSS_skills = [{"Communication": 0},
-                             {"Creativity": 0},
-                             {"Social and Cultural Awareness": 0}]
-
-        # skills for ICT
-        self.ICT_skills = [{"Innovative": 0},
-                           {"Computer": 0},
-                           {"Marketing and Video Editing": 0}]
-
-        # skills for GAS
-        self.GAS_skills = [{"Adaptability": 0},
-                           {"Presentation": 0},
-                           {"Technical": 0}]
+                        "GAS": {"Adaptability": 0,
+                                "Presentation": 0,
+                                "Technical": 0}
+                    }
 
         # calling the first screen
         self.show_frame("StartPage")
@@ -89,6 +71,9 @@ class MainFrame(Tk):
         frame = f(self.container, self)
         frame.grid(row=0, column=0, sticky="NSEW")
         frame.tkraise()
+
+    def rate_strand(self, key, skills, rate):
+        self.strand[key] += rate
 
 
 # initialize main window app
