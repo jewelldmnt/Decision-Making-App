@@ -5,7 +5,6 @@ from HomePage.HomePage import HomePage
 from StrandPage.StrandPage import StrandPage
 from Statements.first import first
 
-
 # class for the main frame
 class MainFrame(Tk):
     # init method of the class Mainframe
@@ -26,36 +25,6 @@ class MainFrame(Tk):
         self.name = ''
         self.strand = ''
 
-        # initial total scores per strand
-        self.strand = {"STEM": 0,
-                       "ABM": 0,
-                       "HUMSS": 0,
-                       "ICT": 0,
-                       "GAS": 0}
-
-        # skills for STEM
-        self.skills = {
-                        "STEM": {"Problem Solving": 0,
-                                 "Math-Science": 0,
-                                 "Innovative": 0},
-
-                        "ABM": {"Business Communication": 0,
-                                "Financial Management": 0,
-                                "Business": 0},
-
-                        "HUMSS": {"Communication": 0,
-                                  "Creativity": 0,
-                                  "Social and Cultural Awareness": 0},
-
-                        "ICT": {"Innovative": 0,
-                                "Computer": 0,
-                                "Marketing and Video Editing": 0},
-
-                        "GAS": {"Adaptability": 0,
-                                "Presentation": 0,
-                                "Technical": 0}
-                    }
-
         # calling the first screen
         self.show_frame("StartPage")
 
@@ -73,7 +42,7 @@ class MainFrame(Tk):
         frame.tkraise()
 
     def rate_strand(self, key, skills, rate):
-        self.strand[key] += rate
+        print(self.strand[key])
 
 
 # initialize main window app

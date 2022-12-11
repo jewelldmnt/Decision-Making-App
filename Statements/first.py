@@ -1,7 +1,7 @@
 from tkinter import *
 from pathlib import Path
 import pygame
-
+from data import strand, skills
 
 # Frame for start page
 class first(Frame):
@@ -50,7 +50,7 @@ class first(Frame):
 
         # creating c1r1 strongly disagree button
         button_c1r1 = Button(image=self.button_imgStronglyDisagree, borderwidth=0, highlightthickness=0,
-                             command=lambda: self.strongly_disagree(controller, button_c1r1, key="ICT", skill="Computer"),
+                             command=lambda: self.strongly_disagree(controller, button_c1r1, "ICT", "Computer"),
                              relief="flat")
         button_c1r1.place(x=404.9999999999999, y=54.0, width=70.0, height=68.0)
 
@@ -191,31 +191,32 @@ class first(Frame):
 
     # function for strongly disagree button
     def strongly_disagree(self, controller, button_pos, key, skill):
-        print(controller.strand["STEM"])
+        strand[key] += 1
+        skills[key][skill] += 1
         button_pos["image"] = self.button_imgStronglyDisagree_on
 
     # function for disagree button
-    def disagree(self, controller, button_pos, strand, skill):
-        controller.strand[strand] += 1
-        controller.skills[strand][skill] += 1
+    def disagree(self, controller, button_pos, key, skill):
+        strand[key] += 1
+        skills[key][skill] += 1
         button_pos["image"] = self.button_imgDisagree_on
 
     # function for neutral button
-    def neutral(self, controller, button_pos, strand, skill):
-        controller.strand[strand] += 1
-        controller.skills[strand][skill] += 1
+    def neutral(self, controller, button_pos, key, skill):
+        strand[key] += 1
+        skills[key][skill] += 1
         button_pos["image"] = self.button_imgNeutral_on
 
     # function for agree button
-    def agree(self, controller, button_pos, strand, skill):
-        controller.strand[strand] += 1
-        controller.skills[strand][skill] += 1
+    def agree(self, controller, button_pos, key, skill):
+        strand[key] += 1
+        skills[key][skill] += 1
         button_pos["image"] = self.button_imgAgree_on
 
     # function for strongly disagree button
-    def strongly_agree(self, controller, button_pos, strand, skill):
-        controller.strand[strand] += 1
-        controller.skills[strand][skill] += 1
+    def strongly_agree(self, controller, button_pos, key, skill):
+        strand[key] += 1
+        skills[key][skill] += 1
         button_pos["image"] = self.button_imgStronglyAgree_on
 
     # for playing the music
