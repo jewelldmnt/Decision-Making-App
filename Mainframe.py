@@ -3,7 +3,10 @@ from tkinter import *
 from StartPage.StartPage import StartPage
 from HomePage.HomePage import HomePage
 from StrandPage.StrandPage import StrandPage
-from Statements.first import first
+from InstructionsPage.InstructionsPage import InstructionsPage
+from Statements.First import First
+from Statements.Second import Second
+
 
 # class for the main frame
 class MainFrame(Tk):
@@ -22,11 +25,62 @@ class MainFrame(Tk):
         self.container.grid_rowconfigure(0, weight=1)
         self.container.grid_columnconfigure(0, weight=1)
 
+        self.strands_ratings = {"STEM": 0,
+                                "ABM": 0,
+                                "HUMSS": 0,
+                                "ICT": 0,
+                                "GAS": 0}
+
+        # skills for STEM
+        self.skills = {
+            "STEM": {"Problem-Solving": 0,
+                     "Math-Science": 0,
+                     "Innovative": 0},
+
+            "ABM": {"Business Communication": 0,
+                    "Financial Management": 0,
+                    "Business": 0},
+
+            "HUMSS": {"Communication": 0,
+                      "Creativity": 0,
+                      "Social and Cultural Awareness": 0},
+
+            "ICT": {"Innovative": 0,
+                    "Computer": 0,
+                    "Marketing and Video Editing": 0},
+
+            "GAS": {"Adaptability": 0,
+                    "Presentation": 0,
+                    "Technical": 0}
+        }
+
+        self.result_strand = ''
+        self.result_skills = ''
+        # the user's name
         self.name = ''
+        # variable for strand page
         self.strand = ''
 
         # calling the first screen
         self.show_frame("StartPage")
+
+    def __setitem__(self, key, value):
+        self.strands_ratings[key] += value
+
+    def __getitem__(self, item):
+        return self.strands_ratings[item]
+
+    def results(self):
+        # getting the strand with the highest rating
+        self.result_strand = max(self.strands_ratings, key=self.strands_ratings.get)
+        print(self.result_strand)
+
+        # making a copy of skills of the resulting strand
+        skills_copy = self.skills[self.result_strand]
+
+        # getting the skills with the highest rating
+        self.result_skills = [key for key, value in skills_copy.items() if value == max(skills_copy.values())]
+        print(self.result_skills)
 
     # showing the current frame above everything
     def show_frame(self, page_name, name=None, strand=None):
@@ -40,9 +94,6 @@ class MainFrame(Tk):
         frame = f(self.container, self)
         frame.grid(row=0, column=0, sticky="NSEW")
         frame.tkraise()
-
-    def rate_strand(self, key, skills, rate):
-        print(self.strand[key])
 
 
 # initialize main window app

@@ -26,7 +26,7 @@ class HomePage(Frame):
         # creating the button for Take the Quiz
         self.button_imgTakeQuiz = PhotoImage(file=self.relative_to_assets("button_TakeQuiz.png"))
         button_TakeQuiz = Button(self, image=self.button_imgTakeQuiz, borderwidth=0, highlightthickness=0,
-                                 command=lambda: controller.show_frame("first", controller.name), relief="flat")
+                                 command=lambda: controller.show_frame("InstructionsPage", controller.name), relief="flat")
         button_TakeQuiz.place(x=563.0, y=381.0, width=235.0, height=52.0)
 
         # creating the button for ABM strand

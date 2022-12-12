@@ -4,8 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Midterms.iml" filepath="$PROJECT_DIR$/.idea/Midterms.iml" />
       <module fileurl="file://$USER_HOME$/Downloads/Student-Information-System-main/SIS-GUI/.idea/SIS-GUI.iml" filepath="$USER_HOME$/Downloads/Student-Information-System-main/SIS-GUI/.idea/SIS-GUI.iml" />
-      <module fileurl="file://$USER_HOME$/Downloads/MODSIM-Midterms-figma/Statement 1-5/.idea/Statement 1-5.iml" filepath="$USER_HOME$/Downloads/MODSIM-Midterms-figma/Statement 1-5/.idea/Statement 1-5.iml" />
-      <module fileurl="file://$USER_HOME$/Downloads/MODSIM-Midterms-figma/Statement 6-10/.idea/Statement 6-10.iml" filepath="$USER_HOME$/Downloads/MODSIM-Midterms-figma/Statement 6-10/.idea/Statement 6-10.iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/MODSIM-Midterms-middle/second/.idea/second.iml" filepath="$USER_HOME$/Downloads/MODSIM-Midterms-middle/second/.idea/second.iml" />
     </modules>
   </component>
 </project>

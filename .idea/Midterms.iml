@@ -7,7 +7,6 @@
     <orderEntry type="jdk" jdkName="Python 3.10 (Midterms)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="SIS-GUI" />
-    <orderEntry type="module" module-name="Statement 1-5" />
-    <orderEntry type="module" module-name="Statement 6-10" />
+    <orderEntry type="module" module-name="second" />
   </component>
 </module>
