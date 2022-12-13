@@ -6,6 +6,7 @@ from StrandPage.StrandPage import StrandPage
 from InstructionsPage.InstructionsPage import InstructionsPage
 from Statements.First import First
 from Statements.Second import Second
+from Statements.Tenth import Tenth
 
 
 # class for the main frame
@@ -47,7 +48,7 @@ class MainFrame(Tk):
 
             "ICT": {"Innovative": 0,
                     "Computer": 0,
-                    "Marketing and Video Editing": 0},
+                    "Marketing and Video-Editing": 0},
 
             "GAS": {"Adaptability": 0,
                     "Presentation": 0,
