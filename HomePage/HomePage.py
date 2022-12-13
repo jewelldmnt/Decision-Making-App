@@ -16,7 +16,7 @@ class HomePage(Frame):
         Frame.__init__(self, parent)
 
         # creating the whole canvas of the frame
-        canvas = Canvas(self, height=800, width=1360, bd=0, highlightthickness=0, relief="ridge")
+        canvas = Canvas(self, bg="#B5E2FA", height=800, width=1360, bd=0, highlightthickness=0, relief="ridge")
         canvas.place(x=0, y=0)
 
         # creating the background design for HomePage
