@@ -6,7 +6,19 @@ from StrandPage.StrandPage import StrandPage
 from InstructionsPage.InstructionsPage import InstructionsPage
 from Statements.First import First
 from Statements.Second import Second
+from Statements.Third import Third
+from Statements.Fourth import Fourth
+from Statements.Fifth import Fifth
+from Statements.Sixth import Sixth
+from Statements.Seventh import Seventh
+from Statements.Eighth import Eighth
+from Statements.Ninth import Ninth
 from Statements.Tenth import Tenth
+from ResultPage.STEM.STEM import STEM
+from ResultPage.ABM.ABM import ABM
+from ResultPage.HUMSS.HUMSS import HUMSS
+from ResultPage.GAS.GAS import GAS
+from ResultPage.ICT.ICT import ICT
 
 
 # class for the main frame
@@ -63,7 +75,7 @@ class MainFrame(Tk):
         self.strand = ''
 
         # calling the first screen
-        self.show_frame("StartPage")
+        self.show_frame("ICT")
 
     def __setitem__(self, key, value):
         self.strands_ratings[key] += value
@@ -74,14 +86,11 @@ class MainFrame(Tk):
     def results(self):
         # getting the strand with the highest rating
         self.result_strand = max(self.strands_ratings, key=self.strands_ratings.get)
-        print(self.result_strand)
-
         # making a copy of skills of the resulting strand
         skills_copy = self.skills[self.result_strand]
 
         # getting the skills with the highest rating
         self.result_skills = [key for key, value in skills_copy.items() if value == max(skills_copy.values())]
-        print(self.result_skills)
 
     # showing the current frame above everything
     def show_frame(self, page_name, name=None, strand=None):

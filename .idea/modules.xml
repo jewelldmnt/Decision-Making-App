@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ResultPage/ABM/.idea/ABM.iml" filepath="$PROJECT_DIR$/ResultPage/ABM/.idea/ABM.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Midterms.iml" filepath="$PROJECT_DIR$/.idea/Midterms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ResultPage/.idea/ResultPage.iml" filepath="$PROJECT_DIR$/ResultPage/.idea/ResultPage.iml" />
       <module fileurl="file://$USER_HOME$/Downloads/Student-Information-System-main/SIS-GUI/.idea/SIS-GUI.iml" filepath="$USER_HOME$/Downloads/Student-Information-System-main/SIS-GUI/.idea/SIS-GUI.iml" />
     </modules>
   </component>
