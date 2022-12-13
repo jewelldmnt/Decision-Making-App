@@ -26,7 +26,7 @@ class Second(Frame):
         canvas.place(x=0, y=0)
 
         # creating the background design for 6 to 10 page
-        self.image_bg = PhotoImage(file=self.relative_to_assets("bg.png"))
+        self.image_bg = PhotoImage(file=self.relative_to_assets("bg2.png"))
         canvas.create_image(680.0000000000001, 400.0, image=self.image_bg)
 
         # creating the text error
