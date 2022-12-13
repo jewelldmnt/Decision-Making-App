@@ -2,6 +2,7 @@ from tkinter import *
 from pathlib import Path
 import pygame
 
+
 # Frame for start page
 class InstructionsPage(Frame):
     # constants
@@ -26,6 +27,23 @@ class InstructionsPage(Frame):
         button_Start = Button(self, image=self.button_imgStart, borderwidth=0, highlightthickness=0,
                               command=lambda: controller.show_frame("First", controller.name), relief="flat")
         button_Start.place(x=611.0, y=623.0, width=138.0994873046875, height=43.87261962890625)
+
+        # creating the back to home page button
+        self.button_imgHome = PhotoImage(file=self.relative_to_assets("button_Home.png"))
+        button_Home = Button(self, image=self.button_imgHome, borderwidth=0, highlightthickness=0,
+                             command=lambda: controller.show_frame("HomePage", controller.name), relief="flat")
+        button_Home.place(x=0.0, y=0.0, width=197.0, height=98.0)
+
+        # creating the image for sound
+        self.is_on = True
+        self.on = PhotoImage(file=self.relative_to_assets("button_SoundsOn.png"))
+        self.off = PhotoImage(file=self.relative_to_assets("button_SoundsOff.png"))
+
+        # creating the button for sound
+        self.button_Sound = Button(self, image=self.on, bd=0, command=self.switch, relief="flat")
+        self.button_Sound.place(x=1163.0, y=2.0, width=197.0, height=98.0)
+
+        self.play()
 
     # function for the right path
     def relative_to_assets(self, path: str) -> Path:
