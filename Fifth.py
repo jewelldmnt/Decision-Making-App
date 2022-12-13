@@ -245,3 +245,4 @@ class Fifth(Frame):
             self.button_Sound.config(image=self.on)
             self.button_Sound.config(command=self.play())
             self.is_on = True
+            
