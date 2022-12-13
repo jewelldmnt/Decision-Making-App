@@ -75,7 +75,7 @@ class MainFrame(Tk):
         self.strand = ''
 
         # calling the first screen
-        self.show_frame("ICT")
+        self.show_frame("StartPage")
 
     def __setitem__(self, key, value):
         self.strands_ratings[key] += value
