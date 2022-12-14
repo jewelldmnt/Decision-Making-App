@@ -3,9 +3,8 @@ from pathlib import Path
 import itertools as it
 import pygame
 
-
 # Frame for start page
-class Sixth(Frame):
+class Second(Frame):
     # constants
     pygame.mixer.init()
     OUTPUT_PATH = Path(__file__).parent
@@ -27,7 +26,7 @@ class Sixth(Frame):
         canvas.place(x=0, y=0)
 
         # creating the background design for 6 to 10 page
-        self.image_bg = PhotoImage(file=self.relative_to_assets("bg6.png"))
+        self.image_bg = PhotoImage(file=self.relative_to_assets("bg2.png"))
         canvas.create_image(680.0000000000001, 400.0, image=self.image_bg)
 
         # creating the text error
@@ -90,7 +89,7 @@ class Sixth(Frame):
         # creating the back button
         self.button_imgBack = PhotoImage(file=self.relative_to_assets("button_Back.png"))
         button_Back = Button(self, image=self.button_imgBack, borderwidth=0, highlightthickness=0,
-                             command=lambda: controller.show_frame("Fifth", controller.name), relief="flat")
+                             command=lambda: controller.show_frame("First", controller.name), relief="flat")
         button_Back.place(x=538.0, y=706.0, width=95.0, height=46.0)
 
         # creating the next button
@@ -99,79 +98,83 @@ class Sixth(Frame):
                              command=lambda: self.next_page(controller), relief="flat")
         button_Next.place(x=761.0, y=704.0, width=95.0, height=46.0)
 
-        # creating c1r1 strong disagree button
+        # c1r1
         button_c1r1 = Button(self, image=self.button_imgStronglyDisagree, borderwidth=0, highlightthickness=0,
-                             command=lambda: self.strongly_disagree(button_c1r1, "c1r1", controller, "STEM", "Math-Science"),relief="flat")
+                             command=lambda: self.strongly_disagree(button_c1r1, "c1r1",  controller, "ABM", "Business Communication"),
+                             relief="flat")
         button_c1r1.place(x=422.0, y=85.0, width=70.0, height=68.0)
 
         # creating c2r1 disagree button
         button_c2r1 = Button(self, image=self.button_imgDisagree, borderwidth=0, highlightthickness=0,
-                             command=lambda: self.disagree(button_c2r1, "c2r1", controller, "STEM", "Math-Science"), relief="flat")
+                             command=lambda: self.disagree(button_c2r1, "c2r1", controller, "ABM", "Business Communication"), relief="flat")
         button_c2r1.place(x=561.0, y=95.0, width=50.0, height=48.0)
 
         # creating c3r1 neutral button
         button_c3r1 = Button(self, image=self.button_imgNeutral, borderwidth=0, highlightthickness=0,
-                             command=lambda: self.neutral(button_c3r1, "c3r1", controller, "STEM", "Math-Science"), relief="flat")
+                             command=lambda: self.neutral(button_c3r1, "c3r1", controller, "ABM", "Business Communication"), relief="flat")
         button_c3r1.place(x=680.0, y=103.0, width=35.0, height=33.0)
 
         # creating c4r1 agree button
         button_c4r1 = Button(self, image=self.button_imgAgree, borderwidth=0, highlightthickness=0,
-                             command=lambda: self.agree(button_c4r1, "c4r1", controller, "STEM", "Math-Science"), relief="flat")
+                             command=lambda: self.agree(button_c4r1, "c4r1", controller, "ABM", "Business Communication"), relief="flat")
         button_c4r1.place(x=784.0, y=95.0, width=50.0, height=48.0)
 
         # creating c5r1 strongly agree button
         button_c5r1 = Button(self, image=self.button_imgStronglyAgree, borderwidth=0, highlightthickness=0,
-                             command=lambda: self.strongly_agree(button_c5r1, "c5r1", controller, "STEM", "Math-Science"),relief="flat")
+                             command=lambda: self.strongly_agree(button_c5r1, "c5r1", controller, "ABM", "Business Communication"),
+                             relief="flat")
         button_c5r1.place(x=903.0, y=85.0, width=70.0, height=68.0)
 
         # creating c1r2 strongly disagree button
         button_c1r2 = Button(self, image=self.button_imgStronglyDisagree, borderwidth=0, highlightthickness=0,
-                             command=lambda: self.strongly_disagree(button_c1r2, "c1r2", controller, "ABM", "Business"),relief="flat")
+                             command=lambda: self.strongly_disagree(button_c1r2, "c1r2", controller, "HUMSS", "Creativity"),
+                             relief="flat")
         button_c1r2.place(x=422.0, y=216.0, width=70.0, height=68.0)
 
         # creating c2r2 disagree button
         button_c2r2 = Button(self, image=self.button_imgDisagree, borderwidth=0, highlightthickness=0,
-                             command=lambda: self.disagree(button_c2r2, "c2r2", controller, "ABM", "Business"), relief="flat")
+                             command=lambda: self.disagree(button_c2r2, "c2r2", controller, "HUMSS", "Creativity"), relief="flat")
         button_c2r2.place(x=561.0, y=226.0, width=50.0, height=48.0)
 
         # creating c3r2 neutral button
         button_c3r2 = Button(self, image=self.button_imgNeutral, borderwidth=0, highlightthickness=0,
-                             command=lambda: self.neutral(button_c3r2, "c3r2", controller, "ABM", "Business"), relief="flat")
+                             command=lambda: self.neutral(button_c3r2, "c3r2", controller, "HUMSS", "Creativity"), relief="flat")
         button_c3r2.place(x=680.0, y=234.0, width=35.0, height=33.0)
 
         # creating c4r2 agree button
         button_c4r2 = Button(self, image=self.button_imgAgree, borderwidth=0, highlightthickness=0,
-                             command=lambda: self.agree(button_c4r2, "c4r2", controller, "ABM", "Business"), relief="flat")
+                             command=lambda: self.agree(button_c4r2, "c4r2", controller, "HUMSS", "Creativity"), relief="flat")
         button_c4r2.place(x=784.0, y=226.0, width=50.0, height=48.0)
 
         # creating c5r2 strongly agree button
         button_c5r2 = Button(self, image=self.button_imgStronglyAgree, borderwidth=0, highlightthickness=0,
-                             command=lambda: self.strongly_agree(button_c5r2, "c5r2", controller, "ABM", "Business"),relief="flat")
+                             command=lambda: self.strongly_agree(button_c5r2, "c5r2", controller, "HUMSS", "Creativity"),
+                             relief="flat")
         button_c5r2.place(x=903.0, y=216.0, width=70.0, height=68.0)
 
         # creating c1r3 strongly disagree button
         button_c1r3 = Button(self, image=self.button_imgStronglyDisagree, borderwidth=0, highlightthickness=0,
-                             command=lambda: self.strongly_disagree(button_c1r3, "c1r3", controller, "ICT", "Computer"), relief="flat")
+                             command=lambda: self.strongly_disagree(button_c1r3, "c1r3", controller, "ABM", "Business Communication"), relief="flat")
         button_c1r3.place(x=422.0, y=347.0, width=70.0, height=68.0)
 
         # creating c2r3 disagree button
         button_c2r3 = Button(self, image=self.button_imgDisagree, borderwidth=0, highlightthickness=0,
-                             command=lambda: self.disagree(button_c2r3, "c2r3", controller, "ICT", "Computer"), relief="flat")
+                             command=lambda: self.disagree(button_c2r3, "c2r3", controller, "ABM", "Business Communication"), relief="flat")
         button_c2r3.place(x=561.0, y=357.0, width=50.0, height=48.0)
 
         # creating c3r3 neutral button
         button_c3r3 = Button(self, image=self.button_imgNeutral, borderwidth=0, highlightthickness=0,
-                             command=lambda: self.neutral(button_c3r3, "c3r3", controller, "ICT", "Computer"), relief="flat")
+                             command=lambda: self.neutral(button_c3r3, "c3r3", controller, "ABM", "Business Communication"), relief="flat")
         button_c3r3.place(x=680.0, y=365.0, width=35.0, height=33.0)
 
         # creating c4r3 agree button
         button_c4r3 = Button(self, image=self.button_imgAgree, borderwidth=0, highlightthickness=0,
-                             command=lambda: self.agree(button_c4r3, "c4r3", controller, "ICT", "Computer"), relief="flat")
+                             command=lambda: self.agree(button_c4r3, "c4r3", controller, "ABM", "Business Communication"), relief="flat")
         button_c4r3.place(x=784.0, y=357.0, width=50.0, height=48.0)
 
         # creating c5r3 strongly agree button
         button_c5r3 = Button(self, image=self.button_imgStronglyAgree, borderwidth=0, highlightthickness=0,
-                             command=lambda: self.strongly_agree(button_c5r3, "c5r3", controller, "ICT", "Computer"), relief="flat")
+                             command=lambda: self.strongly_agree(button_c5r3, "c5r3", controller, "ABM", "Business Communication"), relief="flat")
         button_c5r3.place(x=903.0, y=347.0, width=70.0, height=68.0)
 
         # creating c1r4 strongly disagree button
@@ -201,27 +204,28 @@ class Sixth(Frame):
 
         # creating c1r5 strongly disagree button
         button_c1r5 = Button(self, image=self.button_imgStronglyDisagree, borderwidth=0, highlightthickness=0,
-                             command=lambda: self.strongly_disagree(button_c1r5, "c1r5", controller, "HUMSS", "Communication"),relief="flat")
+                             command=lambda: self.strongly_disagree(button_c1r5, "c1r5", controller, "ABM", "Business Communication"),
+                             relief="flat")
         button_c1r5.place(x=422.0, y=610.0, width=70.0, height=68.0)
 
         # creating c2r5 disagree button
         button_c2r5 = Button(self, image=self.button_imgDisagree, borderwidth=0, highlightthickness=0,
-                             command=lambda: self.disagree(button_c2r5, "c2r5", controller, "HUMSS", "Communication"), relief="flat")
+                             command=lambda: self.disagree(button_c2r5, "c2r5", controller, "ABM", "Business Communication"), relief="flat")
         button_c2r5.place(x=561.0, y=620.0, width=50.0, height=48.0)
 
         # creating c3r5 neutral button
         button_c3r5 = Button(self, image=self.button_imgNeutral, borderwidth=0, highlightthickness=0,
-                             command=lambda: self.neutral(button_c3r5, "c3r5", controller, "HUMSS", "Communication"), relief="flat")
+                             command=lambda: self.neutral(button_c3r5, "c3r5", controller, "ABM", "Business Communication"), relief="flat")
         button_c3r5.place(x=680.0, y=628.0, width=35.0, height=33.0)
 
         # creating c4r5 agree button
         button_c4r5 = Button(self, image=self.button_imgAgree, borderwidth=0, highlightthickness=0,
-                             command=lambda: self.agree(button_c4r5, "c4r5", controller, "HUMSS", "Communication"), relief="flat")
+                             command=lambda: self.agree(button_c4r5, "c4r5", controller, "ABM", "Business Communication"), relief="flat")
         button_c4r5.place(x=784.0, y=620.0, width=50.0, height=48.0)
 
         # creating c5r5 strongly agree button
         button_c5r5 = Button(self, image=self.button_imgStronglyAgree, borderwidth=0, highlightthickness=0,
-                             command=lambda: self.strongly_agree(button_c5r5, "c5r5", controller, "HUMSS", "Communication"), relief="flat")
+                             command=lambda: self.strongly_agree(button_c5r5, "c5r5", controller, "ABM", "Business Communication"), relief="flat")
         button_c5r5.place(x=903.0, y=610.0, width=70.0, height=68.0)
 
         # creating the image for sound
@@ -286,7 +290,7 @@ class Sixth(Frame):
         print(self.s1, self.s2, self.s3, self.s4, self.s5)
         if isComplete:
             self.errorMessage.configure(text="")
-            controller.show_frame("Seventh", controller.name)
+            controller.show_frame("Third", controller.name)
         else:
             self.errorMessage["text"] = "Please rate all the statements!"
 
