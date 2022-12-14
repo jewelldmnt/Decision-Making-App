@@ -361,7 +361,7 @@ class First(Frame):
                     controller.strands_ratings[strand] -= 1
                     controller.skills[strand][skill] -= 1
                     self.minus("c1r1")
-                    self.button_c1r1["image"] = next(self.cycle_c2r1)
+                    self.button_c1r1["image"] = next(self.cycle_c1r1)
                     self.counter_c1r1 -= 1
 
                 if self.counter_c3r1 == 1:
@@ -403,7 +403,7 @@ class First(Frame):
                     controller.strands_ratings[strand] -= 1
                     controller.skills[strand][skill] -= 1
                     self.minus("c1r1")
-                    self.button_c1r1["image"] = next(self.cycle_c2r1)
+                    self.button_c1r1["image"] = next(self.cycle_c1r1)
                     self.counter_c1r1 -= 1
 
                 if self.counter_c2r1 == 1:
@@ -445,7 +445,7 @@ class First(Frame):
                     controller.strands_ratings[strand] -= 1
                     controller.skills[strand][skill] -= 1
                     self.minus("c1r1")
-                    self.button_c1r1["image"] = next(self.cycle_c2r1)
+                    self.button_c1r1["image"] = next(self.cycle_c1r1)
                     self.counter_c1r1 -= 1
 
                 if self.counter_c3r1 == 1:
@@ -574,7 +574,7 @@ class First(Frame):
                     controller.strands_ratings[strand] -= 1
                     controller.skills[strand][skill] -= 1
                     self.minus("c1r2")
-                    self.button_c1r2["image"] = next(self.cycle_c2r2)
+                    self.button_c1r2["image"] = next(self.cycle_c1r2)
                     self.counter_c1r2 -= 1
 
                 if self.counter_c3r2 == 1:
@@ -616,7 +616,7 @@ class First(Frame):
                     controller.strands_ratings[strand] -= 1
                     controller.skills[strand][skill] -= 1
                     self.minus("c1r2")
-                    self.button_c1r2["image"] = next(self.cycle_c2r2)
+                    self.button_c1r2["image"] = next(self.cycle_c1r2)
                     self.counter_c1r2 -= 1
 
                 if self.counter_c2r2 == 1:
@@ -658,7 +658,7 @@ class First(Frame):
                     controller.strands_ratings[strand] -= 1
                     controller.skills[strand][skill] -= 1
                     self.minus("c1r2")
-                    self.button_c1r2["image"] = next(self.cycle_c2r2)
+                    self.button_c1r2["image"] = next(self.cycle_c1r2)
                     self.counter_c1r2 -= 1
 
                 if self.counter_c3r2 == 1:
@@ -700,7 +700,7 @@ class First(Frame):
                     controller.strands_ratings[strand] -= 1
                     controller.skills[strand][skill] -= 1
                     self.minus("c1r2")
-                    self.button_c1r2["image"] = next(self.cycle_c2r2)
+                    self.button_c1r2["image"] = next(self.cycle_c1r2)
                     self.counter_c1r2 -= 1
 
                 if self.counter_c3r2 == 1:
@@ -787,7 +787,7 @@ class First(Frame):
                     controller.strands_ratings[strand] -= 1
                     controller.skills[strand][skill] -= 1
                     self.minus("c1r3")
-                    self.button_c1r3["image"] = next(self.cycle_c2r3)
+                    self.button_c1r3["image"] = next(self.cycle_c1r3)
                     self.counter_c1r3 -= 1
 
                 if self.counter_c3r3 == 1:
@@ -829,7 +829,7 @@ class First(Frame):
                     controller.strands_ratings[strand] -= 1
                     controller.skills[strand][skill] -= 1
                     self.minus("c1r3")
-                    self.button_c1r3["image"] = next(self.cycle_c2r3)
+                    self.button_c1r3["image"] = next(self.cycle_c1r3)
                     self.counter_c1r3 -= 1
 
                 if self.counter_c2r3 == 1:
@@ -871,7 +871,7 @@ class First(Frame):
                     controller.strands_ratings[strand] -= 1
                     controller.skills[strand][skill] -= 1
                     self.minus("c1r3")
-                    self.button_c1r3["image"] = next(self.cycle_c2r3)
+                    self.button_c1r3["image"] = next(self.cycle_c1r3)
                     self.counter_c1r3 -= 1
 
                 if self.counter_c3r3 == 1:
@@ -913,7 +913,7 @@ class First(Frame):
                     controller.strands_ratings[strand] -= 1
                     controller.skills[strand][skill] -= 1
                     self.minus("c1r3")
-                    self.button_c1r3["image"] = next(self.cycle_c2r3)
+                    self.button_c1r3["image"] = next(self.cycle_c1r3)
                     self.counter_c1r3 -= 1
 
                 if self.counter_c3r3 == 1:
@@ -1000,7 +1000,7 @@ class First(Frame):
                     controller.strands_ratings[strand] -= 1
                     controller.skills[strand][skill] -= 1
                     self.minus("c1r4")
-                    self.button_c1r4["image"] = next(self.cycle_c2r4)
+                    self.button_c1r4["image"] = next(self.cycle_c1r4)
                     self.counter_c1r4 -= 1
 
                 if self.counter_c3r4 == 1:
@@ -1042,7 +1042,7 @@ class First(Frame):
                     controller.strands_ratings[strand] -= 1
                     controller.skills[strand][skill] -= 1
                     self.minus("c1r4")
-                    self.button_c1r4["image"] = next(self.cycle_c2r4)
+                    self.button_c1r4["image"] = next(self.cycle_c1r4)
                     self.counter_c1r4 -= 1
 
                 if self.counter_c2r4 == 1:
@@ -1084,7 +1084,7 @@ class First(Frame):
                     controller.strands_ratings[strand] -= 1
                     controller.skills[strand][skill] -= 1
                     self.minus("c1r4")
-                    self.button_c1r4["image"] = next(self.cycle_c2r4)
+                    self.button_c1r4["image"] = next(self.cycle_c1r4)
                     self.counter_c1r4 -= 1
 
                 if self.counter_c3r4 == 1:
@@ -1126,7 +1126,7 @@ class First(Frame):
                     controller.strands_ratings[strand] -= 1
                     controller.skills[strand][skill] -= 1
                     self.minus("c1r4")
-                    self.button_c1r4["image"] = next(self.cycle_c2r4)
+                    self.button_c1r4["image"] = next(self.cycle_c1r4)
                     self.counter_c1r4 -= 1
 
                 if self.counter_c3r4 == 1:
@@ -1213,7 +1213,7 @@ class First(Frame):
                     controller.strands_ratings[strand] -= 1
                     controller.skills[strand][skill] -= 1
                     self.minus("c1r5")
-                    self.button_c1r5["image"] = next(self.cycle_c2r5)
+                    self.button_c1r5["image"] = next(self.cycle_c1r5)
                     self.counter_c1r5 -= 1
 
                 if self.counter_c3r5 == 1:
@@ -1255,7 +1255,7 @@ class First(Frame):
                     controller.strands_ratings[strand] -= 1
                     controller.skills[strand][skill] -= 1
                     self.minus("c1r5")
-                    self.button_c1r5["image"] = next(self.cycle_c2r5)
+                    self.button_c1r5["image"] = next(self.cycle_c1r5)
                     self.counter_c1r5 -= 1
 
                 if self.counter_c2r5 == 1:
@@ -1297,7 +1297,7 @@ class First(Frame):
                     controller.strands_ratings[strand] -= 1
                     controller.skills[strand][skill] -= 1
                     self.minus("c1r5")
-                    self.button_c1r5["image"] = next(self.cycle_c2r5)
+                    self.button_c1r5["image"] = next(self.cycle_c1r5)
                     self.counter_c1r5 -= 1
 
                 if self.counter_c3r5 == 1:
@@ -1339,7 +1339,7 @@ class First(Frame):
                     controller.strands_ratings[strand] -= 1
                     controller.skills[strand][skill] -= 1
                     self.minus("c1r5")
-                    self.button_c1r5["image"] = next(self.cycle_c2r5)
+                    self.button_c1r5["image"] = next(self.cycle_c1r5)
                     self.counter_c1r5 -= 1
 
                 if self.counter_c3r5 == 1:
