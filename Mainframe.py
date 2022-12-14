@@ -1,5 +1,6 @@
 import sys
 from tkinter import *
+import matplotlib.pyplot as plt
 from StartPage.StartPage import StartPage
 from HomePage.HomePage import HomePage
 from StrandPage.StrandPage import StrandPage
@@ -38,6 +39,7 @@ class MainFrame(Tk):
         self.container.grid_rowconfigure(0, weight=1)
         self.container.grid_columnconfigure(0, weight=1)
 
+        # ratings per strands
         self.strands_ratings = {"STEM": 0,
                                 "ABM": 0,
                                 "HUMSS": 0,
@@ -75,7 +77,7 @@ class MainFrame(Tk):
         self.strand = ''
 
         # calling the first screen
-        self.show_frame("StartPage")
+        self.show_frame("ABM")
 
     def __setitem__(self, key, value):
         self.strands_ratings[key] += value
@@ -91,6 +93,22 @@ class MainFrame(Tk):
 
         # getting the skills with the highest rating
         self.result_skills = [key for key, value in skills_copy.items() if value == max(skills_copy.values())]
+
+    def graph(self):
+        colors = ['green', 'blue', 'purple', 'teal', 'orange']
+        ratings = list(self.strands_ratings.values())
+        x_axis = ["STEM", "ABM", "HUMSS", "ICT", "GAS"]
+        y_axis = ratings
+        plt.ylim(-15, 70)
+        plt.bar(x_axis, y_axis, color=colors)
+        for idx, val in enumerate(ratings):
+            plt.text(idx, val + 1, val, ha="center")
+
+        plt.title("StrGuide Result")
+        plt.text(2, -8, "Dito ilalagay yung skills description. \nTriny ko ilabas sa box kaso hindi siya nababasa", ha="center")
+        plt.xlabel("Strands", fontsize=8)
+        plt.ylabel("Ratings", fontsize=8)
+        plt.show()
 
     # showing the current frame above everything
     def show_frame(self, page_name, name=None, strand=None):
