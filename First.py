@@ -35,11 +35,17 @@ class First(Frame):
                                   font=("Schoolbell", 20 * -1))
         self.errorMessage.place(x=550, y=677)
 
+        # creating the back button
+        self.button_imgBack = PhotoImage(file=self.relative_to_assets("button_Back.png"))
+        button_Back = Button(self, image=self.button_imgBack, borderwidth=0, highlightthickness=0,
+                             command=lambda: controller.show_frame("HomePage", controller.name), relief="flat")
+        button_Back.place(x=538.0, y=706.0, width=95.0, height=46.0)
+
         # creating the next button
         self.button_imgNext = PhotoImage(file=self.relative_to_assets("button_Next.png"))
         button_Next = Button(self, image=self.button_imgNext, borderwidth=0, highlightthickness=0,
                              command=lambda: self.next_page(controller), relief="flat")
-        button_Next.place(x=615.9999999999999, y=707.0, width=95.0, height=46.0)
+        button_Next.place(x=761.0, y=704.0, width=95.0, height=46.0)
 
         # button image for strongly disagree button
         self.button_imgStronglyDisagree = PhotoImage(file=self.relative_to_assets("button_StronglyDisagree.png"))
