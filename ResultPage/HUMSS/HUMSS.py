@@ -28,7 +28,7 @@ class HUMSS(Frame):
         # creating the see graph button
         self.button_imgSeeGraph = PhotoImage(file=self.relative_to_assets("button_SeeGraph.png"))
         button_SeeGraph = Button(self, image=self.button_imgSeeGraph, borderwidth=0, highlightthickness=0,
-                                 command=lambda: print("button_1 clicked"), relief="flat")
+                                 command=lambda: controller.graph(), relief="flat")
         button_SeeGraph.place(x=1042.5, y=417.0, width=172.0, height=41.0)
 
         # creating the go back to home button
