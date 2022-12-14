@@ -1,5 +1,6 @@
 from tkinter import *
 from pathlib import Path
+import itertools as it
 import pygame
 
 
@@ -37,22 +38,54 @@ class Fourth(Frame):
         # button image for strongly disagree button
         self.button_imgStronglyDisagree = PhotoImage(file=self.relative_to_assets("button_StronglyDisagree.png"))
         self.button_imgStronglyDisagree_on = PhotoImage(file=self.relative_to_assets("button_StronglyDisagree_on.png"))
+        self.cycle_c1r1 = it.cycle([self.button_imgStronglyDisagree_on, self.button_imgStronglyDisagree])
+        self.cycle_c1r2 = it.cycle([self.button_imgStronglyDisagree_on, self.button_imgStronglyDisagree])
+        self.cycle_c1r3 = it.cycle([self.button_imgStronglyDisagree_on, self.button_imgStronglyDisagree])
+        self.cycle_c1r4 = it.cycle([self.button_imgStronglyDisagree_on, self.button_imgStronglyDisagree])
+        self.cycle_c1r5 = it.cycle([self.button_imgStronglyDisagree_on, self.button_imgStronglyDisagree])
 
         # button image for disagree button
         self.button_imgDisagree = PhotoImage(file=self.relative_to_assets("button_Disagree.png"))
         self.button_imgDisagree_on = PhotoImage(file=self.relative_to_assets("button_Disagree_on.png"))
+        self.cycle_c2r1 = it.cycle([self.button_imgDisagree_on, self.button_imgDisagree])
+        self.cycle_c2r2 = it.cycle([self.button_imgDisagree_on, self.button_imgDisagree])
+        self.cycle_c2r3 = it.cycle([self.button_imgDisagree_on, self.button_imgDisagree])
+        self.cycle_c2r4 = it.cycle([self.button_imgDisagree_on, self.button_imgDisagree])
+        self.cycle_c2r5 = it.cycle([self.button_imgDisagree_on, self.button_imgDisagree])
 
         # button image for neutral button
         self.button_imgNeutral = PhotoImage(file=self.relative_to_assets("button_Neutral.png"))
         self.button_imgNeutral_on = PhotoImage(file=self.relative_to_assets("button_Neutral_on.png"))
+        self.cycle_c3r1 = it.cycle([self.button_imgNeutral_on, self.button_imgNeutral])
+        self.cycle_c3r2 = it.cycle([self.button_imgNeutral_on, self.button_imgNeutral])
+        self.cycle_c3r3 = it.cycle([self.button_imgNeutral_on, self.button_imgNeutral])
+        self.cycle_c3r4 = it.cycle([self.button_imgNeutral_on, self.button_imgNeutral])
+        self.cycle_c3r5 = it.cycle([self.button_imgNeutral_on, self.button_imgNeutral])
 
         # button image for agree button
         self.button_imgAgree = PhotoImage(file=self.relative_to_assets("button_Agree.png"))
         self.button_imgAgree_on = PhotoImage(file=self.relative_to_assets("button_Agree_on.png"))
+        self.cycle_c4r1 = it.cycle([self.button_imgAgree_on, self.button_imgAgree])
+        self.cycle_c4r2 = it.cycle([self.button_imgAgree_on, self.button_imgAgree])
+        self.cycle_c4r3 = it.cycle([self.button_imgAgree_on, self.button_imgAgree])
+        self.cycle_c4r4 = it.cycle([self.button_imgAgree_on, self.button_imgAgree])
+        self.cycle_c4r5 = it.cycle([self.button_imgAgree_on, self.button_imgAgree])
 
         # button image for strongly agree button
         self.button_imgStronglyAgree = PhotoImage(file=self.relative_to_assets("button_StronglyAgree.png"))
         self.button_imgStronglyAgree_on = PhotoImage(file=self.relative_to_assets("button_StronglyAgree_on.png"))
+        self.cycle_c5r1 = it.cycle([self.button_imgStronglyAgree_on, self.button_imgStronglyAgree])
+        self.cycle_c5r2 = it.cycle([self.button_imgStronglyAgree_on, self.button_imgStronglyAgree])
+        self.cycle_c5r3 = it.cycle([self.button_imgStronglyAgree_on, self.button_imgStronglyAgree])
+        self.cycle_c5r4 = it.cycle([self.button_imgStronglyAgree_on, self.button_imgStronglyAgree])
+        self.cycle_c5r5 = it.cycle([self.button_imgStronglyAgree_on, self.button_imgStronglyAgree])
+
+        # counters for all the button
+        self.counter_c1r1, self.counter_c2r1, self.counter_c3r1, self.counter_c4r1, self.counter_c5r1 = 0, 0, 0, 0, 0
+        self.counter_c1r2, self.counter_c2r2, self.counter_c3r2, self.counter_c4r2, self.counter_c5r2 = 0, 0, 0, 0, 0
+        self.counter_c1r3, self.counter_c2r3, self.counter_c3r3, self.counter_c4r3, self.counter_c5r3 = 0, 0, 0, 0, 0
+        self.counter_c1r4, self.counter_c2r4, self.counter_c3r4, self.counter_c4r4, self.counter_c5r4 = 0, 0, 0, 0, 0
+        self.counter_c1r5, self.counter_c2r5, self.counter_c3r5, self.counter_c4r5, self.counter_c5r5 = 0, 0, 0, 0, 0
 
         # creating the back button
         self.button_imgBack = PhotoImage(file=self.relative_to_assets("button_Back.png"))
@@ -248,6 +281,23 @@ class Fourth(Frame):
             self.errorMessage.configure(text="")
             self.s5 += 1
 
+    def minus(self, button_name):
+        if button_name == "c1r1" or button_name == "c2r1" or button_name == "c3r1" or button_name == "c4r1" or button_name == "c5r1":
+            self.errorMessage.configure(text="")
+            self.s1 -= 1
+        if button_name == "c1r2" or button_name == "c2r2" or button_name == "c3r2" or button_name == "c4r2" or button_name == "c5r2":
+            self.errorMessage.configure(text="")
+            self.s2 -= 1
+        if button_name == "c1r3" or button_name == "c2r3" or button_name == "c3r3" or button_name == "c4r3" or button_name == "c5r3":
+            self.errorMessage.configure(text="")
+            self.s3 -= 1
+        if button_name == "c1r4" or button_name == "c2r4" or button_name == "c3r4" or button_name == "c4r4" or button_name == "c5r4":
+            self.errorMessage.configure(text="")
+            self.s4 -= 1
+        if button_name == "c1r5" or button_name == "c2r5" or button_name == "c3r5" or button_name == "c4r5" or button_name == "c5r5":
+            self.errorMessage.configure(text="")
+            self.s5 -= 1
+
     # function that checks if all statements were rated
     def isComplete(self):
         if self.s1 == 1 and self.s2 == 1 and self.s3 == 1 and self.s4 == 1 and self.s5 == 1:
@@ -267,38 +317,363 @@ class Fourth(Frame):
 
     # function for strongly disagree button
     def strongly_disagree(self, button_pos, button_name, controller, strand, skill):
-        controller.strands_ratings[strand] += 1
-        controller.skills[strand][skill] += 1
-        self.count(button_name)
-        button_pos["image"] = self.button_imgStronglyDisagree_on
+        if button_name == "c1r1":
+            if self.counter_c1r1 == 0:
+                controller.strands_ratings[strand] += 1
+                controller.skills[strand][skill] += 1
+                self.count(button_name)
+                button_pos["image"] = next(self.cycle_c1r1)
+                self.counter_c1r1 += 1
+            else:
+                controller.strands_ratings[strand] -= 1
+                controller.skills[strand][skill] -= 1
+                self.minus(button_name)
+                button_pos["image"] = next(self.cycle_c1r1)
+                self.counter_c1r1 -= 1
+
+        if button_name == "c1r2":
+            if self.counter_c1r2 == 0:
+                controller.strands_ratings[strand] += 1
+                controller.skills[strand][skill] += 1
+                self.count(button_name)
+                button_pos["image"] = next(self.cycle_c1r2)
+                self.counter_c1r2 += 1
+            else:
+                controller.strands_ratings[strand] -= 1
+                controller.skills[strand][skill] -= 1
+                self.minus(button_name)
+                button_pos["image"] = next(self.cycle_c1r2)
+                self.counter_c1r2 -= 1
+
+        if button_name == "c1r3":
+            if self.counter_c1r3 == 0:
+                controller.strands_ratings[strand] += 1
+                controller.skills[strand][skill] += 1
+                self.count(button_name)
+                button_pos["image"] = next(self.cycle_c1r3)
+                self.counter_c1r3 += 1
+            else:
+                controller.strands_ratings[strand] -= 1
+                controller.skills[strand][skill] -= 1
+                self.minus(button_name)
+                button_pos["image"] = next(self.cycle_c1r3)
+                self.counter_c1r3 -= 1
+
+        if button_name == "c1r4":
+            if self.counter_c1r4 == 0:
+                controller.strands_ratings[strand] += 1
+                controller.skills[strand][skill] += 1
+                self.count(button_name)
+                button_pos["image"] = next(self.cycle_c1r4)
+                self.counter_c1r4 += 1
+            else:
+                controller.strands_ratings[strand] -= 1
+                controller.skills[strand][skill] -= 1
+                self.minus(button_name)
+                button_pos["image"] = next(self.cycle_c1r4)
+                self.counter_c1r4 -= 1
+
+        if button_name == "c1r5":
+            if self.counter_c1r5 == 0:
+                controller.strands_ratings[strand] += 1
+                controller.skills[strand][skill] += 1
+                self.count(button_name)
+                button_pos["image"] = next(self.cycle_c1r5)
+                self.counter_c1r5 += 1
+            else:
+                controller.strands_ratings[strand] -= 1
+                controller.skills[strand][skill] -= 1
+                self.minus(button_name)
+                button_pos["image"] = next(self.cycle_c1r5)
+                self.counter_c1r5 -= 1
 
     # function for disagree button
     def disagree(self, button_pos, button_name, controller, strand, skill):
-        controller.strands_ratings[strand] += 2
-        controller.skills[strand][skill] += 2
-        self.count(button_name)
-        button_pos["image"] = self.button_imgDisagree_on
+        if button_name == "c2r1":
+            if self.counter_c2r1 == 0:
+                controller.strands_ratings[strand] += 2
+                controller.skills[strand][skill] += 2
+                self.count(button_name)
+                button_pos["image"] = next(self.cycle_c2r1)
+                self.counter_c2r1 += 1
+            else:
+                controller.strands_ratings[strand] -= 2
+                controller.skills[strand][skill] -= 2
+                self.minus(button_name)
+                button_pos["image"] = next(self.cycle_c2r1)
+                self.counter_c2r1 -= 1
+
+        if button_name == "c2r2":
+            if self.counter_c2r2 == 0:
+                controller.strands_ratings[strand] += 2
+                controller.skills[strand][skill] += 2
+                self.count(button_name)
+                button_pos["image"] = next(self.cycle_c2r2)
+                self.counter_c2r2 += 1
+            else:
+                controller.strands_ratings[strand] -= 2
+                controller.skills[strand][skill] -= 2
+                self.minus(button_name)
+                button_pos["image"] = next(self.cycle_c2r2)
+                self.counter_c2r2 -= 1
+
+        if button_name == "c2r3":
+            if self.counter_c2r3 == 0:
+                controller.strands_ratings[strand] += 2
+                controller.skills[strand][skill] += 2
+                self.count(button_name)
+                button_pos["image"] = next(self.cycle_c2r3)
+                self.counter_c2r3 += 1
+            else:
+                controller.strands_ratings[strand] -= 2
+                controller.skills[strand][skill] -= 2
+                self.minus(button_name)
+                button_pos["image"] = next(self.cycle_c2r3)
+                self.counter_c2r3 -= 1
+
+        if button_name == "c2r4":
+            if self.counter_c2r4 == 0:
+                controller.strands_ratings[strand] += 2
+                controller.skills[strand][skill] += 2
+                self.count(button_name)
+                button_pos["image"] = next(self.cycle_c2r4)
+                self.counter_c2r4 += 1
+            else:
+                controller.strands_ratings[strand] -= 2
+                controller.skills[strand][skill] -= 2
+                self.minus(button_name)
+                button_pos["image"] = next(self.cycle_c2r4)
+                self.counter_c2r4 -= 1
+
+        if button_name == "c2r5":
+            if self.counter_c2r5 == 0:
+                controller.strands_ratings[strand] += 2
+                controller.skills[strand][skill] += 2
+                self.count(button_name)
+                button_pos["image"] = next(self.cycle_c2r5)
+                self.counter_c2r5 += 1
+            else:
+                controller.strands_ratings[strand] -= 2
+                controller.skills[strand][skill] -= 2
+                self.minus(button_name)
+                button_pos["image"] = next(self.cycle_c2r5)
+                self.counter_c2r5 -= 1
 
     # function for neutral button
     def neutral(self, button_pos, button_name, controller, strand, skill):
-        controller.strands_ratings[strand] += 3
-        controller.skills[strand][skill] += 3
-        self.count(button_name)
-        button_pos["image"] = self.button_imgNeutral_on
+        if button_name == "c3r1":
+            if self.counter_c3r1 == 0:
+                controller.strands_ratings[strand] += 3
+                controller.skills[strand][skill] += 3
+                self.count(button_name)
+                button_pos["image"] = next(self.cycle_c3r1)
+                self.counter_c3r1 += 1
+            else:
+                controller.strands_ratings[strand] -= 3
+                controller.skills[strand][skill] -= 3
+                self.minus(button_name)
+                button_pos["image"] = next(self.cycle_c3r1)
+                self.counter_c3r1 -= 1
+
+        if button_name == "c3r2":
+            if self.counter_c3r2 == 0:
+                controller.strands_ratings[strand] += 3
+                controller.skills[strand][skill] += 3
+                self.count(button_name)
+                button_pos["image"] = next(self.cycle_c3r2)
+                self.counter_c3r2 += 1
+            else:
+                controller.strands_ratings[strand] -= 3
+                controller.skills[strand][skill] -= 3
+                self.minus(button_name)
+                button_pos["image"] = next(self.cycle_c3r2)
+                self.counter_c3r2 -= 1
+
+        if button_name == "c3r3":
+            if self.counter_c3r3 == 0:
+                controller.strands_ratings[strand] += 3
+                controller.skills[strand][skill] += 3
+                self.count(button_name)
+                button_pos["image"] = next(self.cycle_c3r3)
+                self.counter_c3r3 += 1
+            else:
+                controller.strands_ratings[strand] -= 3
+                controller.skills[strand][skill] -= 3
+                self.minus(button_name)
+                button_pos["image"] = next(self.cycle_c3r3)
+                self.counter_c3r3 -= 1
+
+        if button_name == "c3r4":
+            if self.counter_c3r4 == 0:
+                controller.strands_ratings[strand] += 3
+                controller.skills[strand][skill] += 3
+                self.count(button_name)
+                button_pos["image"] = next(self.cycle_c3r4)
+                self.counter_c3r4 += 1
+            else:
+                controller.strands_ratings[strand] -= 3
+                controller.skills[strand][skill] -= 3
+                self.minus(button_name)
+                button_pos["image"] = next(self.cycle_c3r4)
+                self.counter_c3r4 -= 1
+
+        if button_name == "c3r5":
+            if self.counter_c3r5 == 0:
+                controller.strands_ratings[strand] += 3
+                controller.skills[strand][skill] += 3
+                self.count(button_name)
+                button_pos["image"] = next(self.cycle_c3r5)
+                self.counter_c3r5 += 1
+            else:
+                controller.strands_ratings[strand] -= 3
+                controller.skills[strand][skill] -= 3
+                self.minus(button_name)
+                button_pos["image"] = next(self.cycle_c3r5)
+                self.counter_c3r5 -= 1
 
     # function for agree button
     def agree(self, button_pos, button_name, controller, strand, skill):
-        controller.strands_ratings[strand] += 4
-        controller.skills[strand][skill] += 4
-        self.count(button_name)
-        button_pos["image"] = self.button_imgAgree_on
+        if button_name == "c4r1":
+            if self.counter_c4r1 == 0:
+                controller.strands_ratings[strand] += 4
+                controller.skills[strand][skill] += 4
+                self.count(button_name)
+                button_pos["image"] = next(self.cycle_c4r1)
+                self.counter_c4r1 += 1
+            else:
+                controller.strands_ratings[strand] -= 4
+                controller.skills[strand][skill] -= 4
+                self.minus(button_name)
+                button_pos["image"] = next(self.cycle_c4r1)
+                self.counter_c4r1 -= 1
+
+        if button_name == "c4r2":
+            if self.counter_c4r2 == 0:
+                controller.strands_ratings[strand] += 4
+                controller.skills[strand][skill] += 4
+                self.count(button_name)
+                button_pos["image"] = next(self.cycle_c4r2)
+                self.counter_c4r2 += 1
+            else:
+                controller.strands_ratings[strand] -= 4
+                controller.skills[strand][skill] -= 4
+                self.minus(button_name)
+                button_pos["image"] = next(self.cycle_c4r2)
+                self.counter_c4r2 -= 1
+
+        if button_name == "c4r3":
+            if self.counter_c4r3 == 0:
+                controller.strands_ratings[strand] += 4
+                controller.skills[strand][skill] += 4
+                self.count(button_name)
+                button_pos["image"] = next(self.cycle_c4r3)
+                self.counter_c4r3 += 1
+            else:
+                controller.strands_ratings[strand] -= 4
+                controller.skills[strand][skill] -= 4
+                self.minus(button_name)
+                button_pos["image"] = next(self.cycle_c4r3)
+                self.counter_c4r3 -= 1
+
+        if button_name == "c4r4":
+            if self.counter_c4r4 == 0:
+                controller.strands_ratings[strand] += 4
+                controller.skills[strand][skill] += 4
+                self.count(button_name)
+                button_pos["image"] = next(self.cycle_c4r4)
+                self.counter_c4r4 += 1
+            else:
+                controller.strands_ratings[strand] -= 4
+                controller.skills[strand][skill] -= 4
+                self.minus(button_name)
+                button_pos["image"] = next(self.cycle_c4r4)
+                self.counter_c4r4 -= 1
+
+        if button_name == "c4r5":
+            if self.counter_c4r5 == 0:
+                controller.strands_ratings[strand] += 4
+                controller.skills[strand][skill] += 4
+                self.count(button_name)
+                button_pos["image"] = next(self.cycle_c4r5)
+                self.counter_c4r5 += 1
+            else:
+                controller.strands_ratings[strand] -= 4
+                controller.skills[strand][skill] -= 4
+                self.minus(button_name)
+                button_pos["image"] = next(self.cycle_c4r5)
+                self.counter_c4r5 -= 1
 
     # function for strongly disagree button
     def strongly_agree(self, button_pos, button_name, controller, strand, skill):
-        controller.strands_ratings[strand] += 5
-        controller.skills[strand][skill] += 5
-        self.count(button_name)
-        button_pos["image"] = self.button_imgStronglyAgree_on
+        if button_name == "c5r1":
+            if self.counter_c5r1 == 0:
+                controller.strands_ratings[strand] += 5
+                controller.skills[strand][skill] += 5
+                self.count(button_name)
+                button_pos["image"] = next(self.cycle_c5r1)
+                self.counter_c5r1 += 1
+            else:
+                controller.strands_ratings[strand] -= 5
+                controller.skills[strand][skill] -= 5
+                self.minus(button_name)
+                button_pos["image"] = next(self.cycle_c5r1)
+                self.counter_c5r1 -= 1
+
+        if button_name == "c5r2":
+            if self.counter_c5r2 == 0:
+                controller.strands_ratings[strand] += 5
+                controller.skills[strand][skill] += 5
+                self.count(button_name)
+                button_pos["image"] = next(self.cycle_c5r2)
+                self.counter_c5r2 += 1
+            else:
+                controller.strands_ratings[strand] -= 5
+                controller.skills[strand][skill] -= 5
+                self.minus(button_name)
+                button_pos["image"] = next(self.cycle_c5r2)
+                self.counter_c5r2 -= 1
+
+        if button_name == "c5r3":
+            if self.counter_c5r3 == 0:
+                controller.strands_ratings[strand] += 5
+                controller.skills[strand][skill] += 5
+                self.count(button_name)
+                button_pos["image"] = next(self.cycle_c5r3)
+                self.counter_c5r3 += 1
+            else:
+                controller.strands_ratings[strand] -= 5
+                controller.skills[strand][skill] -= 5
+                self.minus(button_name)
+                button_pos["image"] = next(self.cycle_c5r3)
+                self.counter_c5r3 -= 1
+
+        if button_name == "c5r4":
+            if self.counter_c5r4 == 0:
+                controller.strands_ratings[strand] += 5
+                controller.skills[strand][skill] += 5
+                self.count(button_name)
+                button_pos["image"] = next(self.cycle_c5r4)
+                self.counter_c5r4 += 1
+            else:
+                controller.strands_ratings[strand] -= 5
+                controller.skills[strand][skill] -= 5
+                self.minus(button_name)
+                button_pos["image"] = next(self.cycle_c5r4)
+                self.counter_c5r4 -= 1
+
+        if button_name == "c5r5":
+            if self.counter_c5r5 == 0:
+                controller.strands_ratings[strand] += 5
+                controller.skills[strand][skill] += 5
+                self.count(button_name)
+                button_pos["image"] = next(self.cycle_c5r5)
+                self.counter_c5r5 += 1
+            else:
+                controller.strands_ratings[strand] -= 5
+                controller.skills[strand][skill] -= 5
+                self.minus(button_name)
+                button_pos["image"] = next(self.cycle_c5r5)
+                self.counter_c5r5 -= 1
 
     # for playing the music
     def play(self):
