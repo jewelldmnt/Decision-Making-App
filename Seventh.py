@@ -319,1070 +319,1070 @@ class Seventh(Frame):
         else:
             self.errorMessage["text"] = "Please rate all the statements!"
 
-    # function for statement 1
+# function for statement 1
     def row_1(self, button_name, controller, strand, skill):
 
-                if button_name == "c1r1":
-                    if self.counter_c1r1 == 0:
-                        controller.strands_ratings[strand] += 1
-                        controller.skills[strand][skill] += 1
-                        self.count(button_name)
-                        self.button_c1r1["image"] = next(self.cycle_c1r1)
-                        self.counter_c1r1 += 1
+        if button_name == "c1r1":
+            if self.counter_c1r1 == 0:
+                controller.strands_ratings[strand] += 1
+                controller.skills[strand][skill] += 1
+                self.count(button_name)
+                self.button_c1r1["image"] = next(self.cycle_c1r1)
+                self.counter_c1r1 += 1
 
-                        if self.counter_c2r1 == 1:
-                            controller.strands_ratings[strand] -= 2
-                            controller.skills[strand][skill] -= 2
-                            self.minus("c2r1")
-                            self.button_c2r1["image"] = next(self.cycle_c2r1)
-                            self.counter_c2r1 -= 1
+                if self.counter_c2r1 == 1:
+                    controller.strands_ratings[strand] -= 2
+                    controller.skills[strand][skill] -= 2
+                    self.minus("c2r1")
+                    self.button_c2r1["image"] = next(self.cycle_c2r1)
+                    self.counter_c2r1 -= 1
 
-                        if self.counter_c3r1 == 1:
-                            controller.strands_ratings[strand] -= 3
-                            controller.skills[strand][skill] -= 3
-                            self.minus("c3r1")
-                            self.button_c3r1["image"] = next(self.cycle_c3r1)
-                            self.counter_c3r1 -= 1
+                if self.counter_c3r1 == 1:
+                    controller.strands_ratings[strand] -= 3
+                    controller.skills[strand][skill] -= 3
+                    self.minus("c3r1")
+                    self.button_c3r1["image"] = next(self.cycle_c3r1)
+                    self.counter_c3r1 -= 1
 
-                        if self.counter_c4r1 == 1:
-                            controller.strands_ratings[strand] -= 4
-                            controller.skills[strand][skill] -= 4
-                            self.minus("c4r1")
-                            self.button_c4r1["image"] = next(self.cycle_c4r1)
-                            self.counter_c4r1 -= 1
+                if self.counter_c4r1 == 1:
+                    controller.strands_ratings[strand] -= 4
+                    controller.skills[strand][skill] -= 4
+                    self.minus("c4r1")
+                    self.button_c4r1["image"] = next(self.cycle_c4r1)
+                    self.counter_c4r1 -= 1
 
-                        if self.counter_c5r1 == 1:
-                            controller.strands_ratings[strand] -= 5
-                            controller.skills[strand][skill] -= 5
-                            self.minus("c5r1")
-                            self.button_c5r1["image"] = next(self.cycle_c5r1)
-                            self.counter_c5r1 -= 1
-                    else:
-                        controller.strands_ratings[strand] -= 1
-                        controller.skills[strand][skill] -= 1
-                        self.minus(button_name)
-                        self.button_c1r1["image"] = next(self.cycle_c1r1)
-                        self.counter_c1r1 -= 1
+                if self.counter_c5r1 == 1:
+                    controller.strands_ratings[strand] -= 5
+                    controller.skills[strand][skill] -= 5
+                    self.minus("c5r1")
+                    self.button_c5r1["image"] = next(self.cycle_c5r1)
+                    self.counter_c5r1 -= 1
+            else:
+                controller.strands_ratings[strand] -= 1
+                controller.skills[strand][skill] -= 1
+                self.minus(button_name)
+                self.button_c1r1["image"] = next(self.cycle_c1r1)
+                self.counter_c1r1 -= 1
 
-                if button_name == "c2r1":
-                    if self.counter_c2r1 == 0:
-                        controller.strands_ratings[strand] += 2
-                        controller.skills[strand][skill] += 2
-                        self.count(button_name)
-                        self.button_c2r1["image"] = next(self.cycle_c2r1)
-                        self.counter_c2r1 += 1
+        if button_name == "c2r1":
+            if self.counter_c2r1 == 0:
+                controller.strands_ratings[strand] += 2
+                controller.skills[strand][skill] += 2
+                self.count(button_name)
+                self.button_c2r1["image"] = next(self.cycle_c2r1)
+                self.counter_c2r1 += 1
 
-                        if self.counter_c1r1 == 1:
-                            controller.strands_ratings[strand] -= 1
-                            controller.skills[strand][skill] -= 1
-                            self.minus("c1r1")
-                            self.button_c1r1["image"] = next(self.cycle_c2r1)
-                            self.counter_c1r1 -= 1
+                if self.counter_c1r1 == 1:
+                    controller.strands_ratings[strand] -= 1
+                    controller.skills[strand][skill] -= 1
+                    self.minus("c1r1")
+                    self.button_c1r1["image"] = next(self.cycle_c1r1)
+                    self.counter_c1r1 -= 1
 
-                        if self.counter_c3r1 == 1:
-                            controller.strands_ratings[strand] -= 3
-                            controller.skills[strand][skill] -= 3
-                            self.minus("c3r1")
-                            self.button_c3r1["image"] = next(self.cycle_c3r1)
-                            self.counter_c3r1 -= 1
+                if self.counter_c3r1 == 1:
+                    controller.strands_ratings[strand] -= 3
+                    controller.skills[strand][skill] -= 3
+                    self.minus("c3r1")
+                    self.button_c3r1["image"] = next(self.cycle_c3r1)
+                    self.counter_c3r1 -= 1
 
-                        if self.counter_c4r1 == 1:
-                            controller.strands_ratings[strand] -= 4
-                            controller.skills[strand][skill] -= 4
-                            self.minus("c4r1")
-                            self.button_c4r1["image"] = next(self.cycle_c4r1)
-                            self.counter_c4r1 -= 1
+                if self.counter_c4r1 == 1:
+                    controller.strands_ratings[strand] -= 4
+                    controller.skills[strand][skill] -= 4
+                    self.minus("c4r1")
+                    self.button_c4r1["image"] = next(self.cycle_c4r1)
+                    self.counter_c4r1 -= 1
 
-                        if self.counter_c5r1 == 1:
-                            controller.strands_ratings[strand] -= 5
-                            controller.skills[strand][skill] -= 5
-                            self.minus("c5r1")
-                            self.button_c5r1["image"] = next(self.cycle_c5r1)
-                            self.counter_c5r1 -= 1
-                    else:
-                        controller.strands_ratings[strand] -= 2
-                        controller.skills[strand][skill] -= 2
-                        self.minus(button_name)
-                        self.button_c2r1["image"] = next(self.cycle_c2r1)
-                        self.counter_c2r1 -= 1
+                if self.counter_c5r1 == 1:
+                    controller.strands_ratings[strand] -= 5
+                    controller.skills[strand][skill] -= 5
+                    self.minus("c5r1")
+                    self.button_c5r1["image"] = next(self.cycle_c5r1)
+                    self.counter_c5r1 -= 1
+            else:
+                controller.strands_ratings[strand] -= 2
+                controller.skills[strand][skill] -= 2
+                self.minus(button_name)
+                self.button_c2r1["image"] = next(self.cycle_c2r1)
+                self.counter_c2r1 -= 1
 
-                if button_name == "c3r1":
-                    if self.counter_c3r1 == 0:
-                        controller.strands_ratings[strand] += 3
-                        controller.skills[strand][skill] += 3
-                        self.count(button_name)
-                        self.button_c3r1["image"] = next(self.cycle_c3r1)
-                        self.counter_c3r1 += 1
+        if button_name == "c3r1":
+            if self.counter_c3r1 == 0:
+                controller.strands_ratings[strand] += 3
+                controller.skills[strand][skill] += 3
+                self.count(button_name)
+                self.button_c3r1["image"] = next(self.cycle_c3r1)
+                self.counter_c3r1 += 1
 
-                        if self.counter_c1r1 == 1:
-                            controller.strands_ratings[strand] -= 1
-                            controller.skills[strand][skill] -= 1
-                            self.minus("c1r1")
-                            self.button_c1r1["image"] = next(self.cycle_c2r1)
-                            self.counter_c1r1 -= 1
+                if self.counter_c1r1 == 1:
+                    controller.strands_ratings[strand] -= 1
+                    controller.skills[strand][skill] -= 1
+                    self.minus("c1r1")
+                    self.button_c1r1["image"] = next(self.cycle_c1r1)
+                    self.counter_c1r1 -= 1
 
-                        if self.counter_c2r1 == 1:
-                            controller.strands_ratings[strand] -= 2
-                            controller.skills[strand][skill] -= 2
-                            self.minus("c2r1")
-                            self.button_c2r1["image"] = next(self.cycle_c2r1)
-                            self.counter_c2r1 -= 1
+                if self.counter_c2r1 == 1:
+                    controller.strands_ratings[strand] -= 2
+                    controller.skills[strand][skill] -= 2
+                    self.minus("c2r1")
+                    self.button_c2r1["image"] = next(self.cycle_c2r1)
+                    self.counter_c2r1 -= 1
 
-                        if self.counter_c4r1 == 1:
-                            controller.strands_ratings[strand] -= 4
-                            controller.skills[strand][skill] -= 4
-                            self.minus("c4r1")
-                            self.button_c4r1["image"] = next(self.cycle_c4r1)
-                            self.counter_c4r1 -= 1
+                if self.counter_c4r1 == 1:
+                    controller.strands_ratings[strand] -= 4
+                    controller.skills[strand][skill] -= 4
+                    self.minus("c4r1")
+                    self.button_c4r1["image"] = next(self.cycle_c4r1)
+                    self.counter_c4r1 -= 1
 
-                        if self.counter_c5r1 == 1:
-                            controller.strands_ratings[strand] -= 5
-                            controller.skills[strand][skill] -= 5
-                            self.minus("c5r1")
-                            self.button_c5r1["image"] = next(self.cycle_c5r1)
-                            self.counter_c5r1 -= 1
-                    else:
-                        controller.strands_ratings[strand] -= 3
-                        controller.skills[strand][skill] -= 3
-                        self.minus(button_name)
-                        self.button_c3r1["image"] = next(self.cycle_c3r1)
-                        self.counter_c3r1 -= 1
+                if self.counter_c5r1 == 1:
+                    controller.strands_ratings[strand] -= 5
+                    controller.skills[strand][skill] -= 5
+                    self.minus("c5r1")
+                    self.button_c5r1["image"] = next(self.cycle_c5r1)
+                    self.counter_c5r1 -= 1
+            else:
+                controller.strands_ratings[strand] -= 3
+                controller.skills[strand][skill] -= 3
+                self.minus(button_name)
+                self.button_c3r1["image"] = next(self.cycle_c3r1)
+                self.counter_c3r1 -= 1
 
-                if button_name == "c4r1":
-                    if self.counter_c4r1 == 0:
-                        controller.strands_ratings[strand] += 4
-                        controller.skills[strand][skill] += 4
-                        self.count(button_name)
-                        self.button_c4r1["image"] = next(self.cycle_c4r1)
-                        self.counter_c4r1 += 1
+        if button_name == "c4r1":
+            if self.counter_c4r1 == 0:
+                controller.strands_ratings[strand] += 4
+                controller.skills[strand][skill] += 4
+                self.count(button_name)
+                self.button_c4r1["image"] = next(self.cycle_c4r1)
+                self.counter_c4r1 += 1
 
-                        if self.counter_c1r1 == 1:
-                            controller.strands_ratings[strand] -= 1
-                            controller.skills[strand][skill] -= 1
-                            self.minus("c1r1")
-                            self.button_c1r1["image"] = next(self.cycle_c2r1)
-                            self.counter_c1r1 -= 1
+                if self.counter_c1r1 == 1:
+                    controller.strands_ratings[strand] -= 1
+                    controller.skills[strand][skill] -= 1
+                    self.minus("c1r1")
+                    self.button_c1r1["image"] = next(self.cycle_c1r1)
+                    self.counter_c1r1 -= 1
 
-                        if self.counter_c3r1 == 1:
-                            controller.strands_ratings[strand] -= 3
-                            controller.skills[strand][skill] -= 3
-                            self.minus("c3r1")
-                            self.button_c3r1["image"] = next(self.cycle_c3r1)
-                            self.counter_c3r1 -= 1
+                if self.counter_c3r1 == 1:
+                    controller.strands_ratings[strand] -= 3
+                    controller.skills[strand][skill] -= 3
+                    self.minus("c3r1")
+                    self.button_c3r1["image"] = next(self.cycle_c3r1)
+                    self.counter_c3r1 -= 1
 
-                        if self.counter_c2r1 == 1:
-                            controller.strands_ratings[strand] -= 2
-                            controller.skills[strand][skill] -= 2
-                            self.minus("c2r1")
-                            self.button_c2r1["image"] = next(self.cycle_c2r1)
-                            self.counter_c2r1 -= 1
+                if self.counter_c2r1 == 1:
+                    controller.strands_ratings[strand] -= 2
+                    controller.skills[strand][skill] -= 2
+                    self.minus("c2r1")
+                    self.button_c2r1["image"] = next(self.cycle_c2r1)
+                    self.counter_c2r1 -= 1
 
-                        if self.counter_c5r1 == 1:
-                            controller.strands_ratings[strand] -= 5
-                            controller.skills[strand][skill] -= 5
-                            self.minus("c5r1")
-                            self.button_c5r1["image"] = next(self.cycle_c5r1)
-                            self.counter_c5r1 -= 1
-                    else:
-                        controller.strands_ratings[strand] -= 4
-                        controller.skills[strand][skill] -= 4
-                        self.minus(button_name)
-                        self.button_c4r1["image"] = next(self.cycle_c4r1)
-                        self.counter_c4r1 -= 1
+                if self.counter_c5r1 == 1:
+                    controller.strands_ratings[strand] -= 5
+                    controller.skills[strand][skill] -= 5
+                    self.minus("c5r1")
+                    self.button_c5r1["image"] = next(self.cycle_c5r1)
+                    self.counter_c5r1 -= 1
+            else:
+                controller.strands_ratings[strand] -= 4
+                controller.skills[strand][skill] -= 4
+                self.minus(button_name)
+                self.button_c4r1["image"] = next(self.cycle_c4r1)
+                self.counter_c4r1 -= 1
 
-                if button_name == "c5r1":
-                    if self.counter_c5r1 == 0:
-                        controller.strands_ratings[strand] += 5
-                        controller.skills[strand][skill] += 5
-                        self.count(button_name)
-                        self.button_c5r1["image"] = next(self.cycle_c5r1)
-                        self.counter_c5r1 += 1
+        if button_name == "c5r1":
+            if self.counter_c5r1 == 0:
+                controller.strands_ratings[strand] += 5
+                controller.skills[strand][skill] += 5
+                self.count(button_name)
+                self.button_c5r1["image"] = next(self.cycle_c5r1)
+                self.counter_c5r1 += 1
 
-                        if self.counter_c1r1 == 1:
-                            controller.strands_ratings[strand] -= 1
-                            controller.skills[strand][skill] -= 1
-                            self.minus("c1r1")
-                            self.button_c1r1["image"] = next(self.cycle_c1r1)
-                            self.counter_c1r1 -= 1
+                if self.counter_c1r1 == 1:
+                    controller.strands_ratings[strand] -= 1
+                    controller.skills[strand][skill] -= 1
+                    self.minus("c1r1")
+                    self.button_c1r1["image"] = next(self.cycle_c1r1)
+                    self.counter_c1r1 -= 1
 
-                        if self.counter_c3r1 == 1:
-                            controller.strands_ratings[strand] -= 3
-                            controller.skills[strand][skill] -= 3
-                            self.minus("c3r1")
-                            self.button_c3r1["image"] = next(self.cycle_c3r1)
-                            self.counter_c3r1 -= 1
+                if self.counter_c3r1 == 1:
+                    controller.strands_ratings[strand] -= 3
+                    controller.skills[strand][skill] -= 3
+                    self.minus("c3r1")
+                    self.button_c3r1["image"] = next(self.cycle_c3r1)
+                    self.counter_c3r1 -= 1
 
-                        if self.counter_c4r1 == 1:
-                            controller.strands_ratings[strand] -= 4
-                            controller.skills[strand][skill] -= 4
-                            self.minus("c4r1")
-                            self.button_c4r1["image"] = next(self.cycle_c4r1)
-                            self.counter_c4r1 -= 1
+                if self.counter_c4r1 == 1:
+                    controller.strands_ratings[strand] -= 4
+                    controller.skills[strand][skill] -= 4
+                    self.minus("c4r1")
+                    self.button_c4r1["image"] = next(self.cycle_c4r1)
+                    self.counter_c4r1 -= 1
 
-                        if self.counter_c2r1 == 1:
-                            controller.strands_ratings[strand] -= 2
-                            controller.skills[strand][skill] -= 2
-                            self.minus("c2r1")
-                            self.button_c2r1["image"] = next(self.cycle_c2r1)
-                            self.counter_c2r1 -= 1
-                    else:
-                        controller.strands_ratings[strand] -= 5
-                        controller.skills[strand][skill] -= 5
-                        self.minus(button_name)
-                        self.button_c5r1["image"] = next(self.cycle_c5r1)
-                        self.counter_c5r1 -= 1
+                if self.counter_c2r1 == 1:
+                    controller.strands_ratings[strand] -= 2
+                    controller.skills[strand][skill] -= 2
+                    self.minus("c2r1")
+                    self.button_c2r1["image"] = next(self.cycle_c2r1)
+                    self.counter_c2r1 -= 1
+            else:
+                controller.strands_ratings[strand] -= 5
+                controller.skills[strand][skill] -= 5
+                self.minus(button_name)
+                self.button_c5r1["image"]= next(self.cycle_c5r1)
+                self.counter_c5r1 -= 1
 
     # function for statement 2
     def row_2(self, button_name, controller, strand, skill):
 
-                if button_name == "c1r2":
-                    if self.counter_c1r2 == 0:
-                        controller.strands_ratings[strand] += 1
-                        controller.skills[strand][skill] += 1
-                        self.count(button_name)
-                        self.button_c1r2["image"] = next(self.cycle_c1r2)
-                        self.counter_c1r2 += 1
+        if button_name == "c1r2":
+            if self.counter_c1r2 == 0:
+                controller.strands_ratings[strand] += 1
+                controller.skills[strand][skill] += 1
+                self.count(button_name)
+                self.button_c1r2["image"] = next(self.cycle_c1r2)
+                self.counter_c1r2 += 1
 
-                        if self.counter_c2r2 == 1:
-                            controller.strands_ratings[strand] -= 2
-                            controller.skills[strand][skill] -= 2
-                            self.minus("c2r2")
-                            self.button_c2r2["image"] = next(self.cycle_c2r2)
-                            self.counter_c2r2 -= 1
+                if self.counter_c2r2 == 1:
+                    controller.strands_ratings[strand] -= 2
+                    controller.skills[strand][skill] -= 2
+                    self.minus("c2r2")
+                    self.button_c2r2["image"] = next(self.cycle_c2r2)
+                    self.counter_c2r2 -= 1
 
-                        if self.counter_c3r2 == 1:
-                            controller.strands_ratings[strand] -= 3
-                            controller.skills[strand][skill] -= 3
-                            self.minus("c3r2")
-                            self.button_c3r2["image"] = next(self.cycle_c3r2)
-                            self.counter_c3r2 -= 1
+                if self.counter_c3r2 == 1:
+                    controller.strands_ratings[strand] -= 3
+                    controller.skills[strand][skill] -= 3
+                    self.minus("c3r2")
+                    self.button_c3r2["image"] = next(self.cycle_c3r2)
+                    self.counter_c3r2 -= 1
 
-                        if self.counter_c4r2 == 1:
-                            controller.strands_ratings[strand] -= 4
-                            controller.skills[strand][skill] -= 4
-                            self.minus("c4r2")
-                            self.button_c4r2["image"] = next(self.cycle_c4r2)
-                            self.counter_c4r2 -= 1
+                if self.counter_c4r2 == 1:
+                    controller.strands_ratings[strand] -= 4
+                    controller.skills[strand][skill] -= 4
+                    self.minus("c4r2")
+                    self.button_c4r2["image"] = next(self.cycle_c4r2)
+                    self.counter_c4r2 -= 1
 
-                        if self.counter_c5r2 == 1:
-                            controller.strands_ratings[strand] -= 5
-                            controller.skills[strand][skill] -= 5
-                            self.minus("c5r2")
-                            self.button_c5r2["image"] = next(self.cycle_c5r2)
-                            self.counter_c5r2 -= 1
-                    else:
-                        controller.strands_ratings[strand] -= 1
-                        controller.skills[strand][skill] -= 1
-                        self.minus(button_name)
-                        self.button_c1r2["image"] = next(self.cycle_c1r2)
-                        self.counter_c1r2 -= 1
+                if self.counter_c5r2 == 1:
+                    controller.strands_ratings[strand] -= 5
+                    controller.skills[strand][skill] -= 5
+                    self.minus("c5r2")
+                    self.button_c5r2["image"] = next(self.cycle_c5r2)
+                    self.counter_c5r2 -= 1
+            else:
+                controller.strands_ratings[strand] -= 1
+                controller.skills[strand][skill] -= 1
+                self.minus(button_name)
+                self.button_c1r2["image"] = next(self.cycle_c1r2)
+                self.counter_c1r2 -= 1
 
-                if button_name == "c2r2":
-                    if self.counter_c2r2 == 0:
-                        controller.strands_ratings[strand] += 2
-                        controller.skills[strand][skill] += 2
-                        self.count(button_name)
-                        self.button_c2r2["image"] = next(self.cycle_c2r2)
-                        self.counter_c2r2 += 1
+        if button_name == "c2r2":
+            if self.counter_c2r2 == 0:
+                controller.strands_ratings[strand] += 2
+                controller.skills[strand][skill] += 2
+                self.count(button_name)
+                self.button_c2r2["image"] = next(self.cycle_c2r2)
+                self.counter_c2r2 += 1
 
-                        if self.counter_c1r2 == 1:
-                            controller.strands_ratings[strand] -= 1
-                            controller.skills[strand][skill] -= 1
-                            self.minus("c1r2")
-                            self.button_c1r2["image"] = next(self.cycle_c2r2)
-                            self.counter_c1r2 -= 1
+                if self.counter_c1r2 == 1:
+                    controller.strands_ratings[strand] -= 1
+                    controller.skills[strand][skill] -= 1
+                    self.minus("c1r2")
+                    self.button_c1r2["image"] = next(self.cycle_c1r2)
+                    self.counter_c1r2 -= 1
 
-                        if self.counter_c3r2 == 1:
-                            controller.strands_ratings[strand] -= 3
-                            controller.skills[strand][skill] -= 3
-                            self.minus("c3r2")
-                            self.button_c3r2["image"] = next(self.cycle_c3r2)
-                            self.counter_c3r2 -= 1
+                if self.counter_c3r2 == 1:
+                    controller.strands_ratings[strand] -= 3
+                    controller.skills[strand][skill] -= 3
+                    self.minus("c3r2")
+                    self.button_c3r2["image"] = next(self.cycle_c3r2)
+                    self.counter_c3r2 -= 1
 
-                        if self.counter_c4r2 == 1:
-                            controller.strands_ratings[strand] -= 4
-                            controller.skills[strand][skill] -= 4
-                            self.minus("c4r2")
-                            self.button_c4r2["image"] = next(self.cycle_c4r2)
-                            self.counter_c4r2 -= 1
+                if self.counter_c4r2 == 1:
+                    controller.strands_ratings[strand] -= 4
+                    controller.skills[strand][skill] -= 4
+                    self.minus("c4r2")
+                    self.button_c4r2["image"] = next(self.cycle_c4r2)
+                    self.counter_c4r2 -= 1
 
-                        if self.counter_c5r2 == 1:
-                            controller.strands_ratings[strand] -= 5
-                            controller.skills[strand][skill] -= 5
-                            self.minus("c5r2")
-                            self.button_c5r2["image"] = next(self.cycle_c5r2)
-                            self.counter_c5r2 -= 1
-                    else:
-                        controller.strands_ratings[strand] -= 2
-                        controller.skills[strand][skill] -= 2
-                        self.minus(button_name)
-                        self.button_c2r2["image"] = next(self.cycle_c2r2)
-                        self.counter_c2r2 -= 1
+                if self.counter_c5r2 == 1:
+                    controller.strands_ratings[strand] -= 5
+                    controller.skills[strand][skill] -= 5
+                    self.minus("c5r2")
+                    self.button_c5r2["image"] = next(self.cycle_c5r2)
+                    self.counter_c5r2 -= 1
+            else:
+                controller.strands_ratings[strand] -= 2
+                controller.skills[strand][skill] -= 2
+                self.minus(button_name)
+                self.button_c2r2["image"] = next(self.cycle_c2r2)
+                self.counter_c2r2 -= 1
 
-                if button_name == "c3r2":
-                    if self.counter_c3r2 == 0:
-                        controller.strands_ratings[strand] += 3
-                        controller.skills[strand][skill] += 3
-                        self.count(button_name)
-                        self.button_c3r2["image"] = next(self.cycle_c3r2)
-                        self.counter_c3r2 += 1
+        if button_name == "c3r2":
+            if self.counter_c3r2 == 0:
+                controller.strands_ratings[strand] += 3
+                controller.skills[strand][skill] += 3
+                self.count(button_name)
+                self.button_c3r2["image"] = next(self.cycle_c3r2)
+                self.counter_c3r2 += 1
 
-                        if self.counter_c1r2 == 1:
-                            controller.strands_ratings[strand] -= 1
-                            controller.skills[strand][skill] -= 1
-                            self.minus("c1r2")
-                            self.button_c1r2["image"] = next(self.cycle_c2r2)
-                            self.counter_c1r2 -= 1
+                if self.counter_c1r2 == 1:
+                    controller.strands_ratings[strand] -= 1
+                    controller.skills[strand][skill] -= 1
+                    self.minus("c1r2")
+                    self.button_c1r2["image"] = next(self.cycle_c1r2)
+                    self.counter_c1r2 -= 1
 
-                        if self.counter_c2r2 == 1:
-                            controller.strands_ratings[strand] -= 2
-                            controller.skills[strand][skill] -= 2
-                            self.minus("c2r2")
-                            self.button_c2r2["image"] = next(self.cycle_c2r2)
-                            self.counter_c2r2 -= 1
+                if self.counter_c2r2 == 1:
+                    controller.strands_ratings[strand] -= 2
+                    controller.skills[strand][skill] -= 2
+                    self.minus("c2r2")
+                    self.button_c2r2["image"] = next(self.cycle_c2r2)
+                    self.counter_c2r2 -= 1
 
-                        if self.counter_c4r2 == 1:
-                            controller.strands_ratings[strand] -= 4
-                            controller.skills[strand][skill] -= 4
-                            self.minus("c4r2")
-                            self.button_c4r2["image"] = next(self.cycle_c4r2)
-                            self.counter_c4r2 -= 1
+                if self.counter_c4r2 == 1:
+                    controller.strands_ratings[strand] -= 4
+                    controller.skills[strand][skill] -= 4
+                    self.minus("c4r2")
+                    self.button_c4r2["image"] = next(self.cycle_c4r2)
+                    self.counter_c4r2 -= 1
 
-                        if self.counter_c5r2 == 1:
-                            controller.strands_ratings[strand] -= 5
-                            controller.skills[strand][skill] -= 5
-                            self.minus("c5r2")
-                            self.button_c5r2["image"] = next(self.cycle_c5r2)
-                            self.counter_c5r2 -= 1
-                    else:
-                        controller.strands_ratings[strand] -= 3
-                        controller.skills[strand][skill] -= 3
-                        self.minus(button_name)
-                        self.button_c3r2["image"] = next(self.cycle_c3r2)
-                        self.counter_c3r2 -= 1
+                if self.counter_c5r2 == 1:
+                    controller.strands_ratings[strand] -= 5
+                    controller.skills[strand][skill] -= 5
+                    self.minus("c5r2")
+                    self.button_c5r2["image"] = next(self.cycle_c5r2)
+                    self.counter_c5r2 -= 1
+            else:
+                controller.strands_ratings[strand] -= 3
+                controller.skills[strand][skill] -= 3
+                self.minus(button_name)
+                self.button_c3r2["image"] = next(self.cycle_c3r2)
+                self.counter_c3r2 -= 1
 
-                if button_name == "c4r2":
-                    if self.counter_c4r2 == 0:
-                        controller.strands_ratings[strand] += 4
-                        controller.skills[strand][skill] += 4
-                        self.count(button_name)
-                        self.button_c4r2["image"] = next(self.cycle_c4r2)
-                        self.counter_c4r2 += 1
+        if button_name == "c4r2":
+            if self.counter_c4r2 == 0:
+                controller.strands_ratings[strand] += 4
+                controller.skills[strand][skill] += 4
+                self.count(button_name)
+                self.button_c4r2["image"] = next(self.cycle_c4r2)
+                self.counter_c4r2 += 1
 
-                        if self.counter_c1r2 == 1:
-                            controller.strands_ratings[strand] -= 1
-                            controller.skills[strand][skill] -= 1
-                            self.minus("c1r2")
-                            self.button_c1r2["image"] = next(self.cycle_c2r2)
-                            self.counter_c1r2 -= 1
+                if self.counter_c1r2 == 1:
+                    controller.strands_ratings[strand] -= 1
+                    controller.skills[strand][skill] -= 1
+                    self.minus("c1r2")
+                    self.button_c1r2["image"] = next(self.cycle_c1r2)
+                    self.counter_c1r2 -= 1
 
-                        if self.counter_c3r2 == 1:
-                            controller.strands_ratings[strand] -= 3
-                            controller.skills[strand][skill] -= 3
-                            self.minus("c3r2")
-                            self.button_c3r2["image"] = next(self.cycle_c3r2)
-                            self.counter_c3r2 -= 1
+                if self.counter_c3r2 == 1:
+                    controller.strands_ratings[strand] -= 3
+                    controller.skills[strand][skill] -= 3
+                    self.minus("c3r2")
+                    self.button_c3r2["image"] = next(self.cycle_c3r2)
+                    self.counter_c3r2 -= 1
 
-                        if self.counter_c2r2 == 1:
-                            controller.strands_ratings[strand] -= 2
-                            controller.skills[strand][skill] -= 2
-                            self.minus("c2r2")
-                            self.button_c2r2["image"] = next(self.cycle_c2r2)
-                            self.counter_c2r2 -= 1
+                if self.counter_c2r2 == 1:
+                    controller.strands_ratings[strand] -= 2
+                    controller.skills[strand][skill] -= 2
+                    self.minus("c2r2")
+                    self.button_c2r2["image"] = next(self.cycle_c2r2)
+                    self.counter_c2r2 -= 1
 
-                        if self.counter_c5r2 == 1:
-                            controller.strands_ratings[strand] -= 5
-                            controller.skills[strand][skill] -= 5
-                            self.minus("c5r2")
-                            self.button_c5r2["image"] = next(self.cycle_c5r2)
-                            self.counter_c5r2 -= 1
-                    else:
-                        controller.strands_ratings[strand] -= 4
-                        controller.skills[strand][skill] -= 4
-                        self.minus(button_name)
-                        self.button_c4r2["image"] = next(self.cycle_c4r2)
-                        self.counter_c4r2 -= 1
+                if self.counter_c5r2 == 1:
+                    controller.strands_ratings[strand] -= 5
+                    controller.skills[strand][skill] -= 5
+                    self.minus("c5r2")
+                    self.button_c5r2["image"] = next(self.cycle_c5r2)
+                    self.counter_c5r2 -= 1
+            else:
+                controller.strands_ratings[strand] -= 4
+                controller.skills[strand][skill] -= 4
+                self.minus(button_name)
+                self.button_c4r2["image"] = next(self.cycle_c4r2)
+                self.counter_c4r2 -= 1
 
-                if button_name == "c5r2":
-                    if self.counter_c5r2 == 0:
-                        controller.strands_ratings[strand] += 5
-                        controller.skills[strand][skill] += 5
-                        self.count(button_name)
-                        self.button_c5r2["image"] = next(self.cycle_c5r2)
-                        self.counter_c5r2 += 1
+        if button_name == "c5r2":
+            if self.counter_c5r2 == 0:
+                controller.strands_ratings[strand] += 5
+                controller.skills[strand][skill] += 5
+                self.count(button_name)
+                self.button_c5r2["image"] = next(self.cycle_c5r2)
+                self.counter_c5r2 += 1
 
-                        if self.counter_c1r2 == 1:
-                            controller.strands_ratings[strand] -= 1
-                            controller.skills[strand][skill] -= 1
-                            self.minus("c1r2")
-                            self.button_c1r2["image"] = next(self.cycle_c2r2)
-                            self.counter_c1r2 -= 1
+                if self.counter_c1r2 == 1:
+                    controller.strands_ratings[strand] -= 1
+                    controller.skills[strand][skill] -= 1
+                    self.minus("c1r2")
+                    self.button_c1r2["image"] = next(self.cycle_c1r2)
+                    self.counter_c1r2 -= 1
 
-                        if self.counter_c3r2 == 1:
-                            controller.strands_ratings[strand] -= 3
-                            controller.skills[strand][skill] -= 3
-                            self.minus("c3r2")
-                            self.button_c3r2["image"] = next(self.cycle_c3r2)
-                            self.counter_c3r2 -= 1
+                if self.counter_c3r2 == 1:
+                    controller.strands_ratings[strand] -= 3
+                    controller.skills[strand][skill] -= 3
+                    self.minus("c3r2")
+                    self.button_c3r2["image"] = next(self.cycle_c3r2)
+                    self.counter_c3r2 -= 1
 
-                        if self.counter_c4r2 == 1:
-                            controller.strands_ratings[strand] -= 4
-                            controller.skills[strand][skill] -= 4
-                            self.minus("c4r2")
-                            self.button_c4r2["image"] = next(self.cycle_c4r2)
-                            self.counter_c4r2 -= 1
+                if self.counter_c4r2 == 1:
+                    controller.strands_ratings[strand] -= 4
+                    controller.skills[strand][skill] -= 4
+                    self.minus("c4r2")
+                    self.button_c4r2["image"] = next(self.cycle_c4r2)
+                    self.counter_c4r2 -= 1
 
-                        if self.counter_c2r2 == 1:
-                            controller.strands_ratings[strand] -= 2
-                            controller.skills[strand][skill] -= 2
-                            self.minus("c2r2")
-                            self.button_c2r2["image"] = next(self.cycle_c2r2)
-                            self.counter_c2r2 -= 1
-                    else:
-                        controller.strands_ratings[strand] -= 5
-                        controller.skills[strand][skill] -= 5
-                        self.minus(button_name)
-                        self.button_c5r2["image"] = next(self.cycle_c5r2)
-                        self.counter_c5r2 -= 1
+                if self.counter_c2r2 == 1:
+                    controller.strands_ratings[strand] -= 2
+                    controller.skills[strand][skill] -= 2
+                    self.minus("c2r2")
+                    self.button_c2r2["image"] = next(self.cycle_c2r2)
+                    self.counter_c2r2 -= 1
+            else:
+                controller.strands_ratings[strand] -= 5
+                controller.skills[strand][skill] -= 5
+                self.minus(button_name)
+                self.button_c5r2["image"] = next(self.cycle_c5r2)
+                self.counter_c5r2 -= 1
 
     # function for statement 3
     def row_3(self, button_name, controller, strand, skill):
 
-                if button_name == "c1r3":
-                    if self.counter_c1r3 == 0:
-                        controller.strands_ratings[strand] += 1
-                        controller.skills[strand][skill] += 1
-                        self.count(button_name)
-                        self.button_c1r3["image"] = next(self.cycle_c1r3)
-                        self.counter_c1r3 += 1
+        if button_name == "c1r3":
+            if self.counter_c1r3 == 0:
+                controller.strands_ratings[strand] += 1
+                controller.skills[strand][skill] += 1
+                self.count(button_name)
+                self.button_c1r3["image"] = next(self.cycle_c1r3)
+                self.counter_c1r3 += 1
 
-                        if self.counter_c2r3 == 1:
-                            controller.strands_ratings[strand] -= 2
-                            controller.skills[strand][skill] -= 2
-                            self.minus("c2r3")
-                            self.button_c2r3["image"] = next(self.cycle_c2r3)
-                            self.counter_c2r3 -= 1
+                if self.counter_c2r3 == 1:
+                    controller.strands_ratings[strand] -= 2
+                    controller.skills[strand][skill] -= 2
+                    self.minus("c2r3")
+                    self.button_c2r3["image"] = next(self.cycle_c2r3)
+                    self.counter_c2r3 -= 1
 
-                        if self.counter_c3r3 == 1:
-                            controller.strands_ratings[strand] -= 3
-                            controller.skills[strand][skill] -= 3
-                            self.minus("c3r3")
-                            self.button_c3r3["image"] = next(self.cycle_c3r3)
-                            self.counter_c3r3 -= 1
+                if self.counter_c3r3 == 1:
+                    controller.strands_ratings[strand] -= 3
+                    controller.skills[strand][skill] -= 3
+                    self.minus("c3r3")
+                    self.button_c3r3["image"] = next(self.cycle_c3r3)
+                    self.counter_c3r3 -= 1
 
-                        if self.counter_c4r3 == 1:
-                            controller.strands_ratings[strand] -= 4
-                            controller.skills[strand][skill] -= 4
-                            self.minus("c4r3")
-                            self.button_c4r3["image"] = next(self.cycle_c4r3)
-                            self.counter_c4r3 -= 1
+                if self.counter_c4r3 == 1:
+                    controller.strands_ratings[strand] -= 4
+                    controller.skills[strand][skill] -= 4
+                    self.minus("c4r3")
+                    self.button_c4r3["image"] = next(self.cycle_c4r3)
+                    self.counter_c4r3 -= 1
 
-                        if self.counter_c5r3 == 1:
-                            controller.strands_ratings[strand] -= 5
-                            controller.skills[strand][skill] -= 5
-                            self.minus("c5r3")
-                            self.button_c5r3["image"] = next(self.cycle_c5r3)
-                            self.counter_c5r3 -= 1
-                    else:
-                        controller.strands_ratings[strand] -= 1
-                        controller.skills[strand][skill] -= 1
-                        self.minus(button_name)
-                        self.button_c1r3["image"] = next(self.cycle_c1r3)
-                        self.counter_c1r3 -= 1
+                if self.counter_c5r3 == 1:
+                    controller.strands_ratings[strand] -= 5
+                    controller.skills[strand][skill] -= 5
+                    self.minus("c5r3")
+                    self.button_c5r3["image"] = next(self.cycle_c5r3)
+                    self.counter_c5r3 -= 1
+            else:
+                controller.strands_ratings[strand] -= 1
+                controller.skills[strand][skill] -= 1
+                self.minus(button_name)
+                self.button_c1r3["image"] = next(self.cycle_c1r3)
+                self.counter_c1r3 -= 1
 
-                if button_name == "c2r3":
-                    if self.counter_c2r3 == 0:
-                        controller.strands_ratings[strand] += 2
-                        controller.skills[strand][skill] += 2
-                        self.count(button_name)
-                        self.button_c2r3["image"] = next(self.cycle_c2r3)
-                        self.counter_c2r3 += 1
+        if button_name == "c2r3":
+            if self.counter_c2r3 == 0:
+                controller.strands_ratings[strand] += 2
+                controller.skills[strand][skill] += 2
+                self.count(button_name)
+                self.button_c2r3["image"] = next(self.cycle_c2r3)
+                self.counter_c2r3 += 1
 
-                        if self.counter_c1r3 == 1:
-                            controller.strands_ratings[strand] -= 1
-                            controller.skills[strand][skill] -= 1
-                            self.minus("c1r3")
-                            self.button_c1r3["image"] = next(self.cycle_c2r3)
-                            self.counter_c1r3 -= 1
+                if self.counter_c1r3 == 1:
+                    controller.strands_ratings[strand] -= 1
+                    controller.skills[strand][skill] -= 1
+                    self.minus("c1r3")
+                    self.button_c1r3["image"] = next(self.cycle_c1r3)
+                    self.counter_c1r3 -= 1
 
-                        if self.counter_c3r3 == 1:
-                            controller.strands_ratings[strand] -= 3
-                            controller.skills[strand][skill] -= 3
-                            self.minus("c3r3")
-                            self.button_c3r3["image"] = next(self.cycle_c3r3)
-                            self.counter_c3r3 -= 1
+                if self.counter_c3r3 == 1:
+                    controller.strands_ratings[strand] -= 3
+                    controller.skills[strand][skill] -= 3
+                    self.minus("c3r3")
+                    self.button_c3r3["image"] = next(self.cycle_c3r3)
+                    self.counter_c3r3 -= 1
 
-                        if self.counter_c4r3 == 1:
-                            controller.strands_ratings[strand] -= 4
-                            controller.skills[strand][skill] -= 4
-                            self.minus("c4r3")
-                            self.button_c4r3["image"] = next(self.cycle_c4r3)
-                            self.counter_c4r3 -= 1
+                if self.counter_c4r3 == 1:
+                    controller.strands_ratings[strand] -= 4
+                    controller.skills[strand][skill] -= 4
+                    self.minus("c4r3")
+                    self.button_c4r3["image"] = next(self.cycle_c4r3)
+                    self.counter_c4r3 -= 1
 
-                        if self.counter_c5r3 == 1:
-                            controller.strands_ratings[strand] -= 5
-                            controller.skills[strand][skill] -= 5
-                            self.minus("c5r3")
-                            self.button_c5r3["image"] = next(self.cycle_c5r3)
-                            self.counter_c5r3 -= 1
-                    else:
-                        controller.strands_ratings[strand] -= 2
-                        controller.skills[strand][skill] -= 2
-                        self.minus(button_name)
-                        self.button_c2r3["image"] = next(self.cycle_c2r3)
-                        self.counter_c2r3 -= 1
+                if self.counter_c5r3 == 1:
+                    controller.strands_ratings[strand] -= 5
+                    controller.skills[strand][skill] -= 5
+                    self.minus("c5r3")
+                    self.button_c5r3["image"] = next(self.cycle_c5r3)
+                    self.counter_c5r3 -= 1
+            else:
+                controller.strands_ratings[strand] -= 2
+                controller.skills[strand][skill] -= 2
+                self.minus(button_name)
+                self.button_c2r3["image"] = next(self.cycle_c2r3)
+                self.counter_c2r3 -= 1
 
-                if button_name == "c3r3":
-                    if self.counter_c3r3 == 0:
-                        controller.strands_ratings[strand] += 3
-                        controller.skills[strand][skill] += 3
-                        self.count(button_name)
-                        self.button_c3r3["image"] = next(self.cycle_c3r3)
-                        self.counter_c3r3 += 1
+        if button_name == "c3r3":
+            if self.counter_c3r3 == 0:
+                controller.strands_ratings[strand] += 3
+                controller.skills[strand][skill] += 3
+                self.count(button_name)
+                self.button_c3r3["image"] = next(self.cycle_c3r3)
+                self.counter_c3r3 += 1
 
-                        if self.counter_c1r3 == 1:
-                            controller.strands_ratings[strand] -= 1
-                            controller.skills[strand][skill] -= 1
-                            self.minus("c1r3")
-                            self.button_c1r3["image"] = next(self.cycle_c2r3)
-                            self.counter_c1r3 -= 1
+                if self.counter_c1r3 == 1:
+                    controller.strands_ratings[strand] -= 1
+                    controller.skills[strand][skill] -= 1
+                    self.minus("c1r3")
+                    self.button_c1r3["image"] = next(self.cycle_c1r3)
+                    self.counter_c1r3 -= 1
 
-                        if self.counter_c2r3 == 1:
-                            controller.strands_ratings[strand] -= 2
-                            controller.skills[strand][skill] -= 2
-                            self.minus("c2r3")
-                            self.button_c2r3["image"] = next(self.cycle_c2r3)
-                            self.counter_c2r3 -= 1
+                if self.counter_c2r3 == 1:
+                    controller.strands_ratings[strand] -= 2
+                    controller.skills[strand][skill] -= 2
+                    self.minus("c2r3")
+                    self.button_c2r3["image"] = next(self.cycle_c2r3)
+                    self.counter_c2r3 -= 1
 
-                        if self.counter_c4r3 == 1:
-                            controller.strands_ratings[strand] -= 4
-                            controller.skills[strand][skill] -= 4
-                            self.minus("c4r3")
-                            self.button_c4r3["image"] = next(self.cycle_c4r3)
-                            self.counter_c4r3 -= 1
+                if self.counter_c4r3 == 1:
+                    controller.strands_ratings[strand] -= 4
+                    controller.skills[strand][skill] -= 4
+                    self.minus("c4r3")
+                    self.button_c4r3["image"] = next(self.cycle_c4r3)
+                    self.counter_c4r3 -= 1
 
-                        if self.counter_c5r3 == 1:
-                            controller.strands_ratings[strand] -= 5
-                            controller.skills[strand][skill] -= 5
-                            self.minus("c5r3")
-                            self.button_c5r3["image"] = next(self.cycle_c5r3)
-                            self.counter_c5r3 -= 1
-                    else:
-                        controller.strands_ratings[strand] -= 3
-                        controller.skills[strand][skill] -= 3
-                        self.minus(button_name)
-                        self.button_c3r3["image"] = next(self.cycle_c3r3)
-                        self.counter_c3r3 -= 1
+                if self.counter_c5r3 == 1:
+                    controller.strands_ratings[strand] -= 5
+                    controller.skills[strand][skill] -= 5
+                    self.minus("c5r3")
+                    self.button_c5r3["image"] = next(self.cycle_c5r3)
+                    self.counter_c5r3 -= 1
+            else:
+                controller.strands_ratings[strand] -= 3
+                controller.skills[strand][skill] -= 3
+                self.minus(button_name)
+                self.button_c3r3["image"] = next(self.cycle_c3r3)
+                self.counter_c3r3 -= 1
 
-                if button_name == "c4r3":
-                    if self.counter_c4r3 == 0:
-                        controller.strands_ratings[strand] += 4
-                        controller.skills[strand][skill] += 4
-                        self.count(button_name)
-                        self.button_c4r3["image"] = next(self.cycle_c4r3)
-                        self.counter_c4r3 += 1
+        if button_name == "c4r3":
+            if self.counter_c4r3 == 0:
+                controller.strands_ratings[strand] += 4
+                controller.skills[strand][skill] += 4
+                self.count(button_name)
+                self.button_c4r3["image"] = next(self.cycle_c4r3)
+                self.counter_c4r3 += 1
 
-                        if self.counter_c1r3 == 1:
-                            controller.strands_ratings[strand] -= 1
-                            controller.skills[strand][skill] -= 1
-                            self.minus("c1r3")
-                            self.button_c1r3["image"] = next(self.cycle_c2r3)
-                            self.counter_c1r3 -= 1
+                if self.counter_c1r3 == 1:
+                    controller.strands_ratings[strand] -= 1
+                    controller.skills[strand][skill] -= 1
+                    self.minus("c1r3")
+                    self.button_c1r3["image"] = next(self.cycle_c1r3)
+                    self.counter_c1r3 -= 1
 
-                        if self.counter_c3r3 == 1:
-                            controller.strands_ratings[strand] -= 3
-                            controller.skills[strand][skill] -= 3
-                            self.minus("c3r3")
-                            self.button_c3r3["image"] = next(self.cycle_c3r3)
-                            self.counter_c3r3 -= 1
+                if self.counter_c3r3 == 1:
+                    controller.strands_ratings[strand] -= 3
+                    controller.skills[strand][skill] -= 3
+                    self.minus("c3r3")
+                    self.button_c3r3["image"] = next(self.cycle_c3r3)
+                    self.counter_c3r3 -= 1
 
-                        if self.counter_c2r3 == 1:
-                            controller.strands_ratings[strand] -= 2
-                            controller.skills[strand][skill] -= 2
-                            self.minus("c2r3")
-                            self.button_c2r3["image"] = next(self.cycle_c2r3)
-                            self.counter_c2r3 -= 1
+                if self.counter_c2r3 == 1:
+                    controller.strands_ratings[strand] -= 2
+                    controller.skills[strand][skill] -= 2
+                    self.minus("c2r3")
+                    self.button_c2r3["image"] = next(self.cycle_c2r3)
+                    self.counter_c2r3 -= 1
 
-                        if self.counter_c5r3 == 1:
-                            controller.strands_ratings[strand] -= 5
-                            controller.skills[strand][skill] -= 5
-                            self.minus("c5r3")
-                            self.button_c5r3["image"] = next(self.cycle_c5r3)
-                            self.counter_c5r3 -= 1
-                    else:
-                        controller.strands_ratings[strand] -= 4
-                        controller.skills[strand][skill] -= 4
-                        self.minus(button_name)
-                        self.button_c4r3["image"] = next(self.cycle_c4r3)
-                        self.counter_c4r3 -= 1
+                if self.counter_c5r3 == 1:
+                    controller.strands_ratings[strand] -= 5
+                    controller.skills[strand][skill] -= 5
+                    self.minus("c5r3")
+                    self.button_c5r3["image"] = next(self.cycle_c5r3)
+                    self.counter_c5r3 -= 1
+            else:
+                controller.strands_ratings[strand] -= 4
+                controller.skills[strand][skill] -= 4
+                self.minus(button_name)
+                self.button_c4r3["image"] = next(self.cycle_c4r3)
+                self.counter_c4r3 -= 1
 
-                if button_name == "c5r3":
-                    if self.counter_c5r3 == 0:
-                        controller.strands_ratings[strand] += 5
-                        controller.skills[strand][skill] += 5
-                        self.count(button_name)
-                        self.button_c5r3["image"] = next(self.cycle_c5r3)
-                        self.counter_c5r3 += 1
+        if button_name == "c5r3":
+            if self.counter_c5r3 == 0:
+                controller.strands_ratings[strand] += 5
+                controller.skills[strand][skill] += 5
+                self.count(button_name)
+                self.button_c5r3["image"] = next(self.cycle_c5r3)
+                self.counter_c5r3 += 1
 
-                        if self.counter_c1r3 == 1:
-                            controller.strands_ratings[strand] -= 1
-                            controller.skills[strand][skill] -= 1
-                            self.minus("c1r3")
-                            self.button_c1r3["image"] = next(self.cycle_c2r3)
-                            self.counter_c1r3 -= 1
+                if self.counter_c1r3 == 1:
+                    controller.strands_ratings[strand] -= 1
+                    controller.skills[strand][skill] -= 1
+                    self.minus("c1r3")
+                    self.button_c1r3["image"] = next(self.cycle_c1r3)
+                    self.counter_c1r3 -= 1
 
-                        if self.counter_c3r3 == 1:
-                            controller.strands_ratings[strand] -= 3
-                            controller.skills[strand][skill] -= 3
-                            self.minus("c3r3")
-                            self.button_c3r3["image"] = next(self.cycle_c3r3)
-                            self.counter_c3r3 -= 1
+                if self.counter_c3r3 == 1:
+                    controller.strands_ratings[strand] -= 3
+                    controller.skills[strand][skill] -= 3
+                    self.minus("c3r3")
+                    self.button_c3r3["image"] = next(self.cycle_c3r3)
+                    self.counter_c3r3 -= 1
 
-                        if self.counter_c4r3 == 1:
-                            controller.strands_ratings[strand] -= 4
-                            controller.skills[strand][skill] -= 4
-                            self.minus("c4r3")
-                            self.button_c4r3["image"] = next(self.cycle_c4r3)
-                            self.counter_c4r3 -= 1
+                if self.counter_c4r3 == 1:
+                    controller.strands_ratings[strand] -= 4
+                    controller.skills[strand][skill] -= 4
+                    self.minus("c4r3")
+                    self.button_c4r3["image"] = next(self.cycle_c4r3)
+                    self.counter_c4r3 -= 1
 
-                        if self.counter_c2r3 == 1:
-                            controller.strands_ratings[strand] -= 2
-                            controller.skills[strand][skill] -= 2
-                            self.minus("c2r3")
-                            self.button_c2r3["image"] = next(self.cycle_c2r3)
-                            self.counter_c2r3 -= 1
-                    else:
-                        controller.strands_ratings[strand] -= 5
-                        controller.skills[strand][skill] -= 5
-                        self.minus(button_name)
-                        self.button_c5r3["image"] = next(self.cycle_c5r3)
-                        self.counter_c5r3 -= 1
+                if self.counter_c2r3 == 1:
+                    controller.strands_ratings[strand] -= 2
+                    controller.skills[strand][skill] -= 2
+                    self.minus("c2r3")
+                    self.button_c2r3["image"] = next(self.cycle_c2r3)
+                    self.counter_c2r3 -= 1
+            else:
+                controller.strands_ratings[strand] -= 5
+                controller.skills[strand][skill] -= 5
+                self.minus(button_name)
+                self.button_c5r3["image"] = next(self.cycle_c5r3)
+                self.counter_c5r3 -= 1
 
     # function for statement 4
     def row_4(self, button_name, controller, strand, skill):
 
-                if button_name == "c1r4":
-                    if self.counter_c1r4 == 0:
-                        controller.strands_ratings[strand] += 1
-                        controller.skills[strand][skill] += 1
-                        self.count(button_name)
-                        self.button_c1r4["image"] = next(self.cycle_c1r4)
-                        self.counter_c1r4 += 1
+        if button_name == "c1r4":
+            if self.counter_c1r4 == 0:
+                controller.strands_ratings[strand] += 1
+                controller.skills[strand][skill] += 1
+                self.count(button_name)
+                self.button_c1r4["image"] = next(self.cycle_c1r4)
+                self.counter_c1r4 += 1
 
-                        if self.counter_c2r4 == 1:
-                            controller.strands_ratings[strand] -= 2
-                            controller.skills[strand][skill] -= 2
-                            self.minus("c2r4")
-                            self.button_c2r4["image"] = next(self.cycle_c2r4)
-                            self.counter_c2r4 -= 1
+                if self.counter_c2r4 == 1:
+                    controller.strands_ratings[strand] -= 2
+                    controller.skills[strand][skill] -= 2
+                    self.minus("c2r4")
+                    self.button_c2r4["image"] = next(self.cycle_c2r4)
+                    self.counter_c2r4 -= 1
 
-                        if self.counter_c3r4 == 1:
-                            controller.strands_ratings[strand] -= 3
-                            controller.skills[strand][skill] -= 3
-                            self.minus("c3r4")
-                            self.button_c3r4["image"] = next(self.cycle_c3r4)
-                            self.counter_c3r4 -= 1
+                if self.counter_c3r4 == 1:
+                    controller.strands_ratings[strand] -= 3
+                    controller.skills[strand][skill] -= 3
+                    self.minus("c3r4")
+                    self.button_c3r4["image"] = next(self.cycle_c3r4)
+                    self.counter_c3r4 -= 1
 
-                        if self.counter_c4r4 == 1:
-                            controller.strands_ratings[strand] -= 4
-                            controller.skills[strand][skill] -= 4
-                            self.minus("c4r4")
-                            self.button_c4r4["image"] = next(self.cycle_c4r4)
-                            self.counter_c4r4 -= 1
+                if self.counter_c4r4 == 1:
+                    controller.strands_ratings[strand] -= 4
+                    controller.skills[strand][skill] -= 4
+                    self.minus("c4r4")
+                    self.button_c4r4["image"] = next(self.cycle_c4r4)
+                    self.counter_c4r4 -= 1
 
-                        if self.counter_c5r4 == 1:
-                            controller.strands_ratings[strand] -= 5
-                            controller.skills[strand][skill] -= 5
-                            self.minus("c5r4")
-                            self.button_c5r4["image"] = next(self.cycle_c5r4)
-                            self.counter_c5r4 -= 1
-                    else:
-                        controller.strands_ratings[strand] -= 1
-                        controller.skills[strand][skill] -= 1
-                        self.minus(button_name)
-                        self.button_c1r4["image"] = next(self.cycle_c1r4)
-                        self.counter_c1r4 -= 1
+                if self.counter_c5r4 == 1:
+                    controller.strands_ratings[strand] -= 5
+                    controller.skills[strand][skill] -= 5
+                    self.minus("c5r4")
+                    self.button_c5r4["image"] = next(self.cycle_c5r4)
+                    self.counter_c5r4 -= 1
+            else:
+                controller.strands_ratings[strand] -= 1
+                controller.skills[strand][skill] -= 1
+                self.minus(button_name)
+                self.button_c1r4["image"] = next(self.cycle_c1r4)
+                self.counter_c1r4 -= 1
 
-                if button_name == "c2r4":
-                    if self.counter_c2r4 == 0:
-                        controller.strands_ratings[strand] += 2
-                        controller.skills[strand][skill] += 2
-                        self.count(button_name)
-                        self.button_c2r4["image"] = next(self.cycle_c2r4)
-                        self.counter_c2r4 += 1
+        if button_name == "c2r4":
+            if self.counter_c2r4 == 0:
+                controller.strands_ratings[strand] += 2
+                controller.skills[strand][skill] += 2
+                self.count(button_name)
+                self.button_c2r4["image"] = next(self.cycle_c2r4)
+                self.counter_c2r4 += 1
 
-                        if self.counter_c1r4 == 1:
-                            controller.strands_ratings[strand] -= 1
-                            controller.skills[strand][skill] -= 1
-                            self.minus("c1r4")
-                            self.button_c1r4["image"] = next(self.cycle_c2r4)
-                            self.counter_c1r4 -= 1
+                if self.counter_c1r4 == 1:
+                    controller.strands_ratings[strand] -= 1
+                    controller.skills[strand][skill] -= 1
+                    self.minus("c1r4")
+                    self.button_c1r4["image"] = next(self.cycle_c1r4)
+                    self.counter_c1r4 -= 1
 
-                        if self.counter_c3r4 == 1:
-                            controller.strands_ratings[strand] -= 3
-                            controller.skills[strand][skill] -= 3
-                            self.minus("c3r4")
-                            self.button_c3r4["image"] = next(self.cycle_c3r4)
-                            self.counter_c3r4 -= 1
+                if self.counter_c3r4 == 1:
+                    controller.strands_ratings[strand] -= 3
+                    controller.skills[strand][skill] -= 3
+                    self.minus("c3r4")
+                    self.button_c3r4["image"] = next(self.cycle_c3r4)
+                    self.counter_c3r4 -= 1
 
-                        if self.counter_c4r4 == 1:
-                            controller.strands_ratings[strand] -= 4
-                            controller.skills[strand][skill] -= 4
-                            self.minus("c4r4")
-                            self.button_c4r4["image"] = next(self.cycle_c4r4)
-                            self.counter_c4r4 -= 1
+                if self.counter_c4r4 == 1:
+                    controller.strands_ratings[strand] -= 4
+                    controller.skills[strand][skill] -= 4
+                    self.minus("c4r4")
+                    self.button_c4r4["image"] = next(self.cycle_c4r4)
+                    self.counter_c4r4 -= 1
 
-                        if self.counter_c5r4 == 1:
-                            controller.strands_ratings[strand] -= 5
-                            controller.skills[strand][skill] -= 5
-                            self.minus("c5r4")
-                            self.button_c5r4["image"] = next(self.cycle_c5r4)
-                            self.counter_c5r4 -= 1
-                    else:
-                        controller.strands_ratings[strand] -= 2
-                        controller.skills[strand][skill] -= 2
-                        self.minus(button_name)
-                        self.button_c2r4["image"] = next(self.cycle_c2r4)
-                        self.counter_c2r4 -= 1
+                if self.counter_c5r4 == 1:
+                    controller.strands_ratings[strand] -= 5
+                    controller.skills[strand][skill] -= 5
+                    self.minus("c5r4")
+                    self.button_c5r4["image"] = next(self.cycle_c5r4)
+                    self.counter_c5r4 -= 1
+            else:
+                controller.strands_ratings[strand] -= 2
+                controller.skills[strand][skill] -= 2
+                self.minus(button_name)
+                self.button_c2r4["image"] = next(self.cycle_c2r4)
+                self.counter_c2r4 -= 1
 
-                if button_name == "c3r4":
-                    if self.counter_c3r4 == 0:
-                        controller.strands_ratings[strand] += 3
-                        controller.skills[strand][skill] += 3
-                        self.count(button_name)
-                        self.button_c3r4["image"] = next(self.cycle_c3r4)
-                        self.counter_c3r4 += 1
+        if button_name == "c3r4":
+            if self.counter_c3r4 == 0:
+                controller.strands_ratings[strand] += 3
+                controller.skills[strand][skill] += 3
+                self.count(button_name)
+                self.button_c3r4["image"] = next(self.cycle_c3r4)
+                self.counter_c3r4 += 1
 
-                        if self.counter_c1r4 == 1:
-                            controller.strands_ratings[strand] -= 1
-                            controller.skills[strand][skill] -= 1
-                            self.minus("c1r4")
-                            self.button_c1r4["image"] = next(self.cycle_c2r4)
-                            self.counter_c1r4 -= 1
+                if self.counter_c1r4 == 1:
+                    controller.strands_ratings[strand] -= 1
+                    controller.skills[strand][skill] -= 1
+                    self.minus("c1r4")
+                    self.button_c1r4["image"] = next(self.cycle_c1r4)
+                    self.counter_c1r4 -= 1
 
-                        if self.counter_c2r4 == 1:
-                            controller.strands_ratings[strand] -= 2
-                            controller.skills[strand][skill] -= 2
-                            self.minus("c2r4")
-                            self.button_c2r4["image"] = next(self.cycle_c2r4)
-                            self.counter_c2r4 -= 1
+                if self.counter_c2r4 == 1:
+                    controller.strands_ratings[strand] -= 2
+                    controller.skills[strand][skill] -= 2
+                    self.minus("c2r4")
+                    self.button_c2r4["image"] = next(self.cycle_c2r4)
+                    self.counter_c2r4 -= 1
 
-                        if self.counter_c4r4 == 1:
-                            controller.strands_ratings[strand] -= 4
-                            controller.skills[strand][skill] -= 4
-                            self.minus("c4r4")
-                            self.button_c4r4["image"] = next(self.cycle_c4r4)
-                            self.counter_c4r4 -= 1
+                if self.counter_c4r4 == 1:
+                    controller.strands_ratings[strand] -= 4
+                    controller.skills[strand][skill] -= 4
+                    self.minus("c4r4")
+                    self.button_c4r4["image"] = next(self.cycle_c4r4)
+                    self.counter_c4r4 -= 1
 
-                        if self.counter_c5r4 == 1:
-                            controller.strands_ratings[strand] -= 5
-                            controller.skills[strand][skill] -= 5
-                            self.minus("c5r4")
-                            self.button_c5r4["image"] = next(self.cycle_c5r4)
-                            self.counter_c5r4 -= 1
-                    else:
-                        controller.strands_ratings[strand] -= 3
-                        controller.skills[strand][skill] -= 3
-                        self.minus(button_name)
-                        self.button_c3r4["image"] = next(self.cycle_c3r4)
-                        self.counter_c3r4 -= 1
+                if self.counter_c5r4 == 1:
+                    controller.strands_ratings[strand] -= 5
+                    controller.skills[strand][skill] -= 5
+                    self.minus("c5r4")
+                    self.button_c5r4["image"] = next(self.cycle_c5r4)
+                    self.counter_c5r4 -= 1
+            else:
+                controller.strands_ratings[strand] -= 3
+                controller.skills[strand][skill] -= 3
+                self.minus(button_name)
+                self.button_c3r4["image"] = next(self.cycle_c3r4)
+                self.counter_c3r4 -= 1
 
-                if button_name == "c4r4":
-                    if self.counter_c4r4 == 0:
-                        controller.strands_ratings[strand] += 4
-                        controller.skills[strand][skill] += 4
-                        self.count(button_name)
-                        self.button_c4r4["image"] = next(self.cycle_c4r4)
-                        self.counter_c4r4 += 1
+        if button_name == "c4r4":
+            if self.counter_c4r4 == 0:
+                controller.strands_ratings[strand] += 4
+                controller.skills[strand][skill] += 4
+                self.count(button_name)
+                self.button_c4r4["image"] = next(self.cycle_c4r4)
+                self.counter_c4r4 += 1
 
-                        if self.counter_c1r4 == 1:
-                            controller.strands_ratings[strand] -= 1
-                            controller.skills[strand][skill] -= 1
-                            self.minus("c1r4")
-                            self.button_c1r4["image"] = next(self.cycle_c2r4)
-                            self.counter_c1r4 -= 1
+                if self.counter_c1r4 == 1:
+                    controller.strands_ratings[strand] -= 1
+                    controller.skills[strand][skill] -= 1
+                    self.minus("c1r4")
+                    self.button_c1r4["image"] = next(self.cycle_c1r4)
+                    self.counter_c1r4 -= 1
 
-                        if self.counter_c3r4 == 1:
-                            controller.strands_ratings[strand] -= 3
-                            controller.skills[strand][skill] -= 3
-                            self.minus("c3r4")
-                            self.button_c3r4["image"] = next(self.cycle_c3r4)
-                            self.counter_c3r4 -= 1
+                if self.counter_c3r4 == 1:
+                    controller.strands_ratings[strand] -= 3
+                    controller.skills[strand][skill] -= 3
+                    self.minus("c3r4")
+                    self.button_c3r4["image"] = next(self.cycle_c3r4)
+                    self.counter_c3r4 -= 1
 
-                        if self.counter_c2r4 == 1:
-                            controller.strands_ratings[strand] -= 2
-                            controller.skills[strand][skill] -= 2
-                            self.minus("c2r4")
-                            self.button_c2r4["image"] = next(self.cycle_c2r4)
-                            self.counter_c2r4 -= 1
+                if self.counter_c2r4 == 1:
+                    controller.strands_ratings[strand] -= 2
+                    controller.skills[strand][skill] -= 2
+                    self.minus("c2r4")
+                    self.button_c2r4["image"] = next(self.cycle_c2r4)
+                    self.counter_c2r4 -= 1
 
-                        if self.counter_c5r4 == 1:
-                            controller.strands_ratings[strand] -= 5
-                            controller.skills[strand][skill] -= 5
-                            self.minus("c5r4")
-                            self.button_c5r4["image"] = next(self.cycle_c5r4)
-                            self.counter_c5r4 -= 1
-                    else:
-                        controller.strands_ratings[strand] -= 4
-                        controller.skills[strand][skill] -= 4
-                        self.minus(button_name)
-                        self.button_c4r4["image"] = next(self.cycle_c4r4)
-                        self.counter_c4r4 -= 1
+                if self.counter_c5r4 == 1:
+                    controller.strands_ratings[strand] -= 5
+                    controller.skills[strand][skill] -= 5
+                    self.minus("c5r4")
+                    self.button_c5r4["image"] = next(self.cycle_c5r4)
+                    self.counter_c5r4 -= 1
+            else:
+                controller.strands_ratings[strand] -= 4
+                controller.skills[strand][skill] -= 4
+                self.minus(button_name)
+                self.button_c4r4["image"] = next(self.cycle_c4r4)
+                self.counter_c4r4 -= 1
 
-                if button_name == "c5r4":
-                    if self.counter_c5r4 == 0:
-                        controller.strands_ratings[strand] += 5
-                        controller.skills[strand][skill] += 5
-                        self.count(button_name)
-                        self.button_c5r4["image"] = next(self.cycle_c5r4)
-                        self.counter_c5r4 += 1
+        if button_name == "c5r4":
+            if self.counter_c5r4 == 0:
+                controller.strands_ratings[strand] += 5
+                controller.skills[strand][skill] += 5
+                self.count(button_name)
+                self.button_c5r4["image"] = next(self.cycle_c5r4)
+                self.counter_c5r4 += 1
 
-                        if self.counter_c1r4 == 1:
-                            controller.strands_ratings[strand] -= 1
-                            controller.skills[strand][skill] -= 1
-                            self.minus("c1r4")
-                            self.button_c1r4["image"] = next(self.cycle_c2r4)
-                            self.counter_c1r4 -= 1
+                if self.counter_c1r4 == 1:
+                    controller.strands_ratings[strand] -= 1
+                    controller.skills[strand][skill] -= 1
+                    self.minus("c1r4")
+                    self.button_c1r4["image"] = next(self.cycle_c1r4)
+                    self.counter_c1r4 -= 1
 
-                        if self.counter_c3r4 == 1:
-                            controller.strands_ratings[strand] -= 3
-                            controller.skills[strand][skill] -= 3
-                            self.minus("c3r4")
-                            self.button_c3r4["image"] = next(self.cycle_c3r4)
-                            self.counter_c3r4 -= 1
+                if self.counter_c3r4 == 1:
+                    controller.strands_ratings[strand] -= 3
+                    controller.skills[strand][skill] -= 3
+                    self.minus("c3r4")
+                    self.button_c3r4["image"] = next(self.cycle_c3r4)
+                    self.counter_c3r4 -= 1
 
-                        if self.counter_c4r4 == 1:
-                            controller.strands_ratings[strand] -= 4
-                            controller.skills[strand][skill] -= 4
-                            self.minus("c4r4")
-                            self.button_c4r4["image"] = next(self.cycle_c4r4)
-                            self.counter_c4r4 -= 1
+                if self.counter_c4r4 == 1:
+                    controller.strands_ratings[strand] -= 4
+                    controller.skills[strand][skill] -= 4
+                    self.minus("c4r4")
+                    self.button_c4r4["image"] = next(self.cycle_c4r4)
+                    self.counter_c4r4 -= 1
 
-                        if self.counter_c2r4 == 1:
-                            controller.strands_ratings[strand] -= 2
-                            controller.skills[strand][skill] -= 2
-                            self.minus("c2r4")
-                            self.button_c2r4["image"] = next(self.cycle_c2r4)
-                            self.counter_c2r4 -= 1
-                    else:
-                        controller.strands_ratings[strand] -= 5
-                        controller.skills[strand][skill] -= 5
-                        self.minus(button_name)
-                        self.button_c5r4["image"] = next(self.cycle_c5r4)
-                        self.counter_c5r4 -= 1
+                if self.counter_c2r4 == 1:
+                    controller.strands_ratings[strand] -= 2
+                    controller.skills[strand][skill] -= 2
+                    self.minus("c2r4")
+                    self.button_c2r4["image"] = next(self.cycle_c2r4)
+                    self.counter_c2r4 -= 1
+            else:
+                controller.strands_ratings[strand] -= 5
+                controller.skills[strand][skill] -= 5
+                self.minus(button_name)
+                self.button_c5r4["image"] = next(self.cycle_c5r4)
+                self.counter_c5r4 -= 1
 
     # function for statement 5
     def row_5(self, button_name, controller, strand, skill):
 
-                if button_name == "c1r5":
-                    if self.counter_c1r5 == 0:
-                        controller.strands_ratings[strand] += 1
-                        controller.skills[strand][skill] += 1
-                        self.count(button_name)
-                        self.button_c1r5["image"] = next(self.cycle_c1r5)
-                        self.counter_c1r5 += 1
+        if button_name == "c1r5":
+            if self.counter_c1r5 == 0:
+                controller.strands_ratings[strand] += 1
+                controller.skills[strand][skill] += 1
+                self.count(button_name)
+                self.button_c1r5["image"] = next(self.cycle_c1r5)
+                self.counter_c1r5 += 1
 
-                        if self.counter_c2r5 == 1:
-                            controller.strands_ratings[strand] -= 2
-                            controller.skills[strand][skill] -= 2
-                            self.minus("c2r5")
-                            self.button_c2r5["image"] = next(self.cycle_c2r5)
-                            self.counter_c2r5 -= 1
+                if self.counter_c2r5 == 1:
+                    controller.strands_ratings[strand] -= 2
+                    controller.skills[strand][skill] -= 2
+                    self.minus("c2r5")
+                    self.button_c2r5["image"] = next(self.cycle_c2r5)
+                    self.counter_c2r5 -= 1
 
-                        if self.counter_c3r5 == 1:
-                            controller.strands_ratings[strand] -= 3
-                            controller.skills[strand][skill] -= 3
-                            self.minus("c3r5")
-                            self.button_c3r5["image"] = next(self.cycle_c3r5)
-                            self.counter_c3r5 -= 1
+                if self.counter_c3r5 == 1:
+                    controller.strands_ratings[strand] -= 3
+                    controller.skills[strand][skill] -= 3
+                    self.minus("c3r5")
+                    self.button_c3r5["image"] = next(self.cycle_c3r5)
+                    self.counter_c3r5 -= 1
 
-                        if self.counter_c4r5 == 1:
-                            controller.strands_ratings[strand] -= 4
-                            controller.skills[strand][skill] -= 4
-                            self.minus("c4r5")
-                            self.button_c4r5["image"] = next(self.cycle_c4r5)
-                            self.counter_c4r5 -= 1
+                if self.counter_c4r5 == 1:
+                    controller.strands_ratings[strand] -= 4
+                    controller.skills[strand][skill] -= 4
+                    self.minus("c4r5")
+                    self.button_c4r5["image"] = next(self.cycle_c4r5)
+                    self.counter_c4r5 -= 1
 
-                        if self.counter_c5r5 == 1:
-                            controller.strands_ratings[strand] -= 5
-                            controller.skills[strand][skill] -= 5
-                            self.minus("c5r5")
-                            self.button_c5r5["image"] = next(self.cycle_c5r5)
-                            self.counter_c5r5 -= 1
-                    else:
-                        controller.strands_ratings[strand] -= 1
-                        controller.skills[strand][skill] -= 1
-                        self.minus(button_name)
-                        self.button_c1r5["image"] = next(self.cycle_c1r5)
-                        self.counter_c1r5 -= 1
+                if self.counter_c5r5 == 1:
+                    controller.strands_ratings[strand] -= 5
+                    controller.skills[strand][skill] -= 5
+                    self.minus("c5r5")
+                    self.button_c5r5["image"] = next(self.cycle_c5r5)
+                    self.counter_c5r5 -= 1
+            else:
+                controller.strands_ratings[strand] -= 1
+                controller.skills[strand][skill] -= 1
+                self.minus(button_name)
+                self.button_c1r5["image"] = next(self.cycle_c1r5)
+                self.counter_c1r5 -= 1
 
-                if button_name == "c2r5":
-                    if self.counter_c2r5 == 0:
-                        controller.strands_ratings[strand] += 2
-                        controller.skills[strand][skill] += 2
-                        self.count(button_name)
-                        self.button_c2r5["image"] = next(self.cycle_c2r5)
-                        self.counter_c2r5 += 1
+        if button_name == "c2r5":
+            if self.counter_c2r5 == 0:
+                controller.strands_ratings[strand] += 2
+                controller.skills[strand][skill] += 2
+                self.count(button_name)
+                self.button_c2r5["image"] = next(self.cycle_c2r5)
+                self.counter_c2r5 += 1
 
-                        if self.counter_c1r5 == 1:
-                            controller.strands_ratings[strand] -= 1
-                            controller.skills[strand][skill] -= 1
-                            self.minus("c1r5")
-                            self.button_c1r5["image"] = next(self.cycle_c2r5)
-                            self.counter_c1r5 -= 1
+                if self.counter_c1r5 == 1:
+                    controller.strands_ratings[strand] -= 1
+                    controller.skills[strand][skill] -= 1
+                    self.minus("c1r5")
+                    self.button_c1r5["image"] = next(self.cycle_c1r5)
+                    self.counter_c1r5 -= 1
 
-                        if self.counter_c3r5 == 1:
-                            controller.strands_ratings[strand] -= 3
-                            controller.skills[strand][skill] -= 3
-                            self.minus("c3r5")
-                            self.button_c3r5["image"] = next(self.cycle_c3r5)
-                            self.counter_c3r5 -= 1
+                if self.counter_c3r5 == 1:
+                    controller.strands_ratings[strand] -= 3
+                    controller.skills[strand][skill] -= 3
+                    self.minus("c3r5")
+                    self.button_c3r5["image"] = next(self.cycle_c3r5)
+                    self.counter_c3r5 -= 1
 
-                        if self.counter_c4r5 == 1:
-                            controller.strands_ratings[strand] -= 4
-                            controller.skills[strand][skill] -= 4
-                            self.minus("c4r5")
-                            self.button_c4r5["image"] = next(self.cycle_c4r5)
-                            self.counter_c4r5 -= 1
+                if self.counter_c4r5 == 1:
+                    controller.strands_ratings[strand] -= 4
+                    controller.skills[strand][skill] -= 4
+                    self.minus("c4r5")
+                    self.button_c4r5["image"] = next(self.cycle_c4r5)
+                    self.counter_c4r5 -= 1
 
-                        if self.counter_c5r5 == 1:
-                            controller.strands_ratings[strand] -= 5
-                            controller.skills[strand][skill] -= 5
-                            self.minus("c5r5")
-                            self.button_c5r5["image"] = next(self.cycle_c5r5)
-                            self.counter_c5r5 -= 1
-                    else:
-                        controller.strands_ratings[strand] -= 2
-                        controller.skills[strand][skill] -= 2
-                        self.minus(button_name)
-                        self.button_c2r5["image"] = next(self.cycle_c2r5)
-                        self.counter_c2r5 -= 1
+                if self.counter_c5r5 == 1:
+                    controller.strands_ratings[strand] -= 5
+                    controller.skills[strand][skill] -= 5
+                    self.minus("c5r5")
+                    self.button_c5r5["image"] = next(self.cycle_c5r5)
+                    self.counter_c5r5 -= 1
+            else:
+                controller.strands_ratings[strand] -= 2
+                controller.skills[strand][skill] -= 2
+                self.minus(button_name)
+                self.button_c2r5["image"] = next(self.cycle_c2r5)
+                self.counter_c2r5 -= 1
 
-                if button_name == "c3r5":
-                    if self.counter_c3r5 == 0:
-                        controller.strands_ratings[strand] += 3
-                        controller.skills[strand][skill] += 3
-                        self.count(button_name)
-                        self.button_c3r5["image"] = next(self.cycle_c3r5)
-                        self.counter_c3r5 += 1
+        if button_name == "c3r5":
+            if self.counter_c3r5 == 0:
+                controller.strands_ratings[strand] += 3
+                controller.skills[strand][skill] += 3
+                self.count(button_name)
+                self.button_c3r5["image"] = next(self.cycle_c3r5)
+                self.counter_c3r5 += 1
 
-                        if self.counter_c1r5 == 1:
-                            controller.strands_ratings[strand] -= 1
-                            controller.skills[strand][skill] -= 1
-                            self.minus("c1r5")
-                            self.button_c1r5["image"] = next(self.cycle_c2r5)
-                            self.counter_c1r5 -= 1
+                if self.counter_c1r5 == 1:
+                    controller.strands_ratings[strand] -= 1
+                    controller.skills[strand][skill] -= 1
+                    self.minus("c1r5")
+                    self.button_c1r5["image"] = next(self.cycle_c1r5)
+                    self.counter_c1r5 -= 1
 
-                        if self.counter_c2r5 == 1:
-                            controller.strands_ratings[strand] -= 2
-                            controller.skills[strand][skill] -= 2
-                            self.minus("c2r5")
-                            self.button_c2r5["image"] = next(self.cycle_c2r5)
-                            self.counter_c2r5 -= 1
+                if self.counter_c2r5 == 1:
+                    controller.strands_ratings[strand] -= 2
+                    controller.skills[strand][skill] -= 2
+                    self.minus("c2r5")
+                    self.button_c2r5["image"] = next(self.cycle_c2r5)
+                    self.counter_c2r5 -= 1
 
-                        if self.counter_c4r5 == 1:
-                            controller.strands_ratings[strand] -= 4
-                            controller.skills[strand][skill] -= 4
-                            self.minus("c4r5")
-                            self.button_c4r5["image"] = next(self.cycle_c4r5)
-                            self.counter_c4r5 -= 1
+                if self.counter_c4r5 == 1:
+                    controller.strands_ratings[strand] -= 4
+                    controller.skills[strand][skill] -= 4
+                    self.minus("c4r5")
+                    self.button_c4r5["image"] = next(self.cycle_c4r5)
+                    self.counter_c4r5 -= 1
 
-                        if self.counter_c5r5 == 1:
-                            controller.strands_ratings[strand] -= 5
-                            controller.skills[strand][skill] -= 5
-                            self.minus("c5r5")
-                            self.button_c5r5["image"] = next(self.cycle_c5r5)
-                            self.counter_c5r5 -= 1
-                    else:
-                        controller.strands_ratings[strand] -= 3
-                        controller.skills[strand][skill] -= 3
-                        self.minus(button_name)
-                        self.button_c3r5["image"] = next(self.cycle_c3r5)
-                        self.counter_c3r5 -= 1
+                if self.counter_c5r5 == 1:
+                    controller.strands_ratings[strand] -= 5
+                    controller.skills[strand][skill] -= 5
+                    self.minus("c5r5")
+                    self.button_c5r5["image"] = next(self.cycle_c5r5)
+                    self.counter_c5r5 -= 1
+            else:
+                controller.strands_ratings[strand] -= 3
+                controller.skills[strand][skill] -= 3
+                self.minus(button_name)
+                self.button_c3r5["image"] = next(self.cycle_c3r5)
+                self.counter_c3r5 -= 1
 
-                if button_name == "c4r5":
-                    if self.counter_c4r5 == 0:
-                        controller.strands_ratings[strand] += 4
-                        controller.skills[strand][skill] += 4
-                        self.count(button_name)
-                        self.button_c4r5["image"] = next(self.cycle_c4r5)
-                        self.counter_c4r5 += 1
+        if button_name == "c4r5":
+            if self.counter_c4r5 == 0:
+                controller.strands_ratings[strand] += 4
+                controller.skills[strand][skill] += 4
+                self.count(button_name)
+                self.button_c4r5["image"] = next(self.cycle_c4r5)
+                self.counter_c4r5 += 1
 
-                        if self.counter_c1r5 == 1:
-                            controller.strands_ratings[strand] -= 1
-                            controller.skills[strand][skill] -= 1
-                            self.minus("c1r5")
-                            self.button_c1r5["image"] = next(self.cycle_c2r5)
-                            self.counter_c1r5 -= 1
+                if self.counter_c1r5 == 1:
+                    controller.strands_ratings[strand] -= 1
+                    controller.skills[strand][skill] -= 1
+                    self.minus("c1r5")
+                    self.button_c1r5["image"] = next(self.cycle_c1r5)
+                    self.counter_c1r5 -= 1
 
-                        if self.counter_c3r5 == 1:
-                            controller.strands_ratings[strand] -= 3
-                            controller.skills[strand][skill] -= 3
-                            self.minus("c3r5")
-                            self.button_c3r5["image"] = next(self.cycle_c3r5)
-                            self.counter_c3r5 -= 1
+                if self.counter_c3r5 == 1:
+                    controller.strands_ratings[strand] -= 3
+                    controller.skills[strand][skill] -= 3
+                    self.minus("c3r5")
+                    self.button_c3r5["image"] = next(self.cycle_c3r5)
+                    self.counter_c3r5 -= 1
 
-                        if self.counter_c2r5 == 1:
-                            controller.strands_ratings[strand] -= 2
-                            controller.skills[strand][skill] -= 2
-                            self.minus("c2r5")
-                            self.button_c2r5["image"] = next(self.cycle_c2r5)
-                            self.counter_c2r5 -= 1
+                if self.counter_c2r5 == 1:
+                    controller.strands_ratings[strand] -= 2
+                    controller.skills[strand][skill] -= 2
+                    self.minus("c2r5")
+                    self.button_c2r5["image"] = next(self.cycle_c2r5)
+                    self.counter_c2r5 -= 1
 
-                        if self.counter_c5r5 == 1:
-                            controller.strands_ratings[strand] -= 5
-                            controller.skills[strand][skill] -= 5
-                            self.minus("c5r5")
-                            self.button_c5r5["image"] = next(self.cycle_c5r5)
-                            self.counter_c5r5 -= 1
-                    else:
-                        controller.strands_ratings[strand] -= 4
-                        controller.skills[strand][skill] -= 4
-                        self.minus(button_name)
-                        self.button_c4r5["image"] = next(self.cycle_c4r5)
-                        self.counter_c4r5 -= 1
+                if self.counter_c5r5 == 1:
+                    controller.strands_ratings[strand] -= 5
+                    controller.skills[strand][skill] -= 5
+                    self.minus("c5r5")
+                    self.button_c5r5["image"] = next(self.cycle_c5r5)
+                    self.counter_c5r5 -= 1
+            else:
+                controller.strands_ratings[strand] -= 4
+                controller.skills[strand][skill] -= 4
+                self.minus(button_name)
+                self.button_c4r5["image"] = next(self.cycle_c4r5)
+                self.counter_c4r5 -= 1
 
-                if button_name == "c5r5":
-                    if self.counter_c5r5 == 0:
-                        controller.strands_ratings[strand] += 5
-                        controller.skills[strand][skill] += 5
-                        self.count(button_name)
-                        self.button_c5r5["image"] = next(self.cycle_c5r5)
-                        self.counter_c5r5 += 1
+        if button_name == "c5r5":
+            if self.counter_c5r5 == 0:
+                controller.strands_ratings[strand] += 5
+                controller.skills[strand][skill] += 5
+                self.count(button_name)
+                self.button_c5r5["image"] = next(self.cycle_c5r5)
+                self.counter_c5r5 += 1
 
-                        if self.counter_c1r5 == 1:
-                            controller.strands_ratings[strand] -= 1
-                            controller.skills[strand][skill] -= 1
-                            self.minus("c1r5")
-                            self.button_c1r5["image"] = next(self.cycle_c2r5)
-                            self.counter_c1r5 -= 1
+                if self.counter_c1r5 == 1:
+                    controller.strands_ratings[strand] -= 1
+                    controller.skills[strand][skill] -= 1
+                    self.minus("c1r5")
+                    self.button_c1r5["image"] = next(self.cycle_c1r5)
+                    self.counter_c1r5 -= 1
 
-                        if self.counter_c3r5 == 1:
-                            controller.strands_ratings[strand] -= 3
-                            controller.skills[strand][skill] -= 3
-                            self.minus("c3r5")
-                            self.button_c3r5["image"] = next(self.cycle_c3r5)
-                            self.counter_c3r5 -= 1
+                if self.counter_c3r5 == 1:
+                    controller.strands_ratings[strand] -= 3
+                    controller.skills[strand][skill] -= 3
+                    self.minus("c3r5")
+                    self.button_c3r5["image"] = next(self.cycle_c3r5)
+                    self.counter_c3r5 -= 1
 
-                        if self.counter_c4r5 == 1:
-                            controller.strands_ratings[strand] -= 4
-                            controller.skills[strand][skill] -= 4
-                            self.minus("c4r5")
-                            self.button_c4r5["image"] = next(self.cycle_c4r5)
-                            self.counter_c4r5 -= 1
+                if self.counter_c4r5 == 1:
+                    controller.strands_ratings[strand] -= 4
+                    controller.skills[strand][skill] -= 4
+                    self.minus("c4r5")
+                    self.button_c4r5["image"] = next(self.cycle_c4r5)
+                    self.counter_c4r5 -= 1
 
-                        if self.counter_c2r5 == 1:
-                            controller.strands_ratings[strand] -= 2
-                            controller.skills[strand][skill] -= 2
-                            self.minus("c2r5")
-                            self.button_c2r5["image"] = next(self.cycle_c2r5)
-                            self.counter_c2r5 -= 1
-                    else:
-                        controller.strands_ratings[strand] -= 5
-                        controller.skills[strand][skill] -= 5
-                        self.minus(button_name)
-                        self.button_c5r5["image"] = next(self.cycle_c5r5)
-                        self.counter_c5r5 -= 1
+                if self.counter_c2r5 == 1:
+                    controller.strands_ratings[strand] -= 2
+                    controller.skills[strand][skill] -= 2
+                    self.minus("c2r5")
+                    self.button_c2r5["image"] = next(self.cycle_c2r5)
+                    self.counter_c2r5 -= 1
+            else:
+                controller.strands_ratings[strand] -= 5
+                controller.skills[strand][skill] -= 5
+                self.minus(button_name)
+                self.button_c5r5["image"] = next(self.cycle_c5r5)
+                self.counter_c5r5 -= 1
 
     # for playing the music
     def play(self):
