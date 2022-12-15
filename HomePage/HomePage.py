@@ -11,7 +11,7 @@ class HomePage(Frame):
     OUTPUT_PATH = Path(__file__).parent
     ASSETS_PATH = OUTPUT_PATH / Path("./assets")
 
-    # sign in page class init method
+    # Home page class init method
     def __init__(self, parent, controller):
         Frame.__init__(self, parent)
 
@@ -30,7 +30,7 @@ class HomePage(Frame):
                                  relief="flat")
         button_TakeQuiz.place(x=563.0, y=381.0, width=235.0, height=52.0)
 
-        # creating the button for Take the Quiz
+        # creating the Exit button
         self.button_imgExit = PhotoImage(file=self.relative_to_assets("button_Exit.png"))
         button_Exit = Button(self, image=self.button_imgExit, borderwidth=0, highlightthickness=0,
                              command=lambda: exit(), relief="flat")

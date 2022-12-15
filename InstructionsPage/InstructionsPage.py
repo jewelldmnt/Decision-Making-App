@@ -3,14 +3,14 @@ from pathlib import Path
 import pygame
 
 
-# Frame for start page
+# Frame for Instructions page
 class InstructionsPage(Frame):
     # constants
     pygame.mixer.init()
     OUTPUT_PATH = Path(__file__).parent
     ASSETS_PATH = OUTPUT_PATH / Path("./assets")
 
-    # start page class init method
+    # instructions page class init method
     def __init__(self, parent, controller):
         Frame.__init__(self, parent)
 
@@ -18,7 +18,7 @@ class InstructionsPage(Frame):
         canvas = Canvas(self, height=800, width=1360, bd=0, highlightthickness=0, relief="ridge")
         canvas.place(x=0, y=0)
 
-        # creating the background design for start page
+        # creating the background design for instructions page
         self.image_bg = PhotoImage(file=self.relative_to_assets("bg.png"))
         canvas.create_image(680.0, 400.0, image=self.image_bg)
 

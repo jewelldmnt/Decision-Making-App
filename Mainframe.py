@@ -21,7 +21,6 @@ from ResultPage.HUMSS.HUMSS import HUMSS
 from ResultPage.GAS.GAS import GAS
 from ResultPage.ICT.ICT import ICT
 
-
 # class for the main frame
 class MainFrame(Tk):
     # init method of the class Mainframe
@@ -46,7 +45,7 @@ class MainFrame(Tk):
                                 "ICT": 0,
                                 "GAS": 0}
 
-        # skills for STEM
+        # skills ratings for STEM
         self.skills = {
             "STEM": {"Problem-Solving": 0,
                      "Math-Science": 0,
@@ -69,7 +68,7 @@ class MainFrame(Tk):
                     "Technical": 0}
         }
 
-        # description for skills
+        # description for each skill
         self.skills_description = {
             "STEM": {"Problem-Solving": "You have the ability to recognize the problem by thinking \n"
                                         "outside the box and come up with different alternative \n"
@@ -116,14 +115,16 @@ class MainFrame(Tk):
             "GAS": {"Adaptability": "You seem uncertain and confused on what specific \n"
                                     "path you would take and you still want to weigh \n"
                                     "your options.",
-                    "Presentation": "You seem uncertain and confused on what specific \n"
-                                    "path you would take and you still want to weigh \n"
-                                    "your options.",
+                    "Presentation": "You like to communicate and create ideas to \n"
+                                    "help other people.",
                     "Technical": "You are flexible enough to take any strand in \n"
                                  "Senior High School because of your eagerness to \n"
                                  "learn different subjects."}
         }
+
+        # initializes the result_strand
         self.result_strand = ''
+        # initializes the result skills
         self.result_skills = ''
         # the user's name
         self.name = ''
@@ -133,12 +134,7 @@ class MainFrame(Tk):
         # calling the first screen
         self.show_frame("StartPage")
 
-    def __setitem__(self, key, value):
-        self.strands_ratings[key] += value
-
-    def __getitem__(self, item):
-        return self.strands_ratings[item]
-
+    # getting the strand and skill result
     def results(self):
         # getting the strand with the highest rating
         self.result_strand = max(self.strands_ratings, key=self.strands_ratings.get)
@@ -148,6 +144,7 @@ class MainFrame(Tk):
         # getting the skills with the highest rating
         self.result_skills = max(skills_copy, key=skills_copy.get)
 
+    # graphing the result
     def graph(self):
         colors = ['green', 'blue', 'purple', 'teal', 'orange']
         ratings = list(self.strands_ratings.values())

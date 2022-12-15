@@ -4,14 +4,14 @@ from tkVideoPlayer import TkinterVideo
 import pygame
 
 
-# Frame for start page
+# Frame for GAS page
 class GAS(Frame):
     # constants
     pygame.mixer.init()
     OUTPUT_PATH = Path(__file__).parent
     ASSETS_PATH = OUTPUT_PATH / Path("./assets")
 
-    # start page class init method
+    # GAS page class init method
     def __init__(self, parent, controller):
         Frame.__init__(self, parent)
 
@@ -19,7 +19,7 @@ class GAS(Frame):
         canvas = Canvas(self, height=800, width=1360, bd=0, highlightthickness=0, relief="ridge")
         canvas.place(x=0, y=0)
 
-        # creating the background design for start page
+        # creating the background design for GAS page
         self.videoplayer = TkinterVideo(master=self, scaled=True)
         self.videoplayer.load("ResultPage/GAS/assets/gas.mp4")
         self.videoplayer.pack(expand=True, fill="both")

@@ -4,14 +4,14 @@ import itertools as it
 import pygame
 
 
-# Frame for start page
+# Frame for statements 1 to 5 page
 class First(Frame):
     # constants
     pygame.mixer.init()
     OUTPUT_PATH = Path(__file__).parent
     ASSETS_PATH = OUTPUT_PATH / Path("./top assets")
 
-    # start page class init method
+    # First class init method
     def __init__(self, parent, controller):
         Frame.__init__(self, parent)
 
