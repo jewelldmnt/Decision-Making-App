@@ -26,8 +26,15 @@ class HomePage(Frame):
         # creating the button for Take the Quiz
         self.button_imgTakeQuiz = PhotoImage(file=self.relative_to_assets("button_TakeQuiz.png"))
         button_TakeQuiz = Button(self, image=self.button_imgTakeQuiz, borderwidth=0, highlightthickness=0,
-                                 command=lambda: controller.show_frame("InstructionsPage", controller.name), relief="flat")
+                                 command=lambda: controller.show_frame("InstructionsPage", controller.name),
+                                 relief="flat")
         button_TakeQuiz.place(x=563.0, y=381.0, width=235.0, height=52.0)
+
+        # creating the button for Take the Quiz
+        self.button_imgExit = PhotoImage(file=self.relative_to_assets("button_Exit.png"))
+        button_Exit = Button(self, image=self.button_imgExit, borderwidth=0, highlightthickness=0,
+                             command=lambda: exit(), relief="flat")
+        button_Exit.place(x=1308.0, y=0.0, width=51.0, height=33.0)
 
         # creating the button for ABM strand
         self.button_imgABM = PhotoImage(file=self.relative_to_assets("button_ABM.png"))
@@ -44,7 +51,8 @@ class HomePage(Frame):
         # creating the button for HUMSS strand
         self.button_imgHUMSS = PhotoImage(file=self.relative_to_assets("button_HUMSS.png"))
         button_HUMSS = Button(self, image=self.button_imgHUMSS, borderwidth=0, highlightthickness=0,
-                              command=lambda: controller.show_frame("StrandPage", controller.name, "HUMSS"), relief="flat")
+                              command=lambda: controller.show_frame("StrandPage", controller.name, "HUMSS"),
+                              relief="flat")
         button_HUMSS.place(x=632.0, y=28.0, width=148.0, height=50.0)
 
         # creating the button for ICT strand
@@ -56,7 +64,8 @@ class HomePage(Frame):
         # creating the button for STEM strand
         self.button_imgSTEM = PhotoImage(file=self.relative_to_assets("button_STEM.png"))
         button_STEM = Button(self, image=self.button_imgSTEM, borderwidth=0, highlightthickness=0,
-                             command=lambda: controller.show_frame("StrandPage", controller.name, "STEM"), relief="flat")
+                             command=lambda: controller.show_frame("StrandPage", controller.name, "STEM"),
+                             relief="flat")
         button_STEM.place(x=964.0, y=28.0, width=118.0, height=50.0)
 
         # creating the button for changing the user's name
