@@ -100,10 +100,10 @@ class Tenth(Frame):
         button_Submit.place(x=766.0, y=704.0, width=95.0, height=46.0)
 
         # c1r1
-        button_c1r1 = Button(self, image=self.button_imgStronglyDisagree, borderwidth=0, highlightthickness=0,
+        self.button_c1r1 = Button(self, image=self.button_imgStronglyDisagree, borderwidth=0, highlightthickness=0,
                              command=lambda: self.row_1("c1r1", controller, "HUMSS", "Social and Cultural Awareness"),
                              relief="flat")
-        button_c1r1.place(x=427.0, y=84.0, width=70.0, height=68.0)
+        self.button_c1r1.place(x=427.0, y=84.0, width=70.0, height=68.0)
 
         # creating c2r1 disagree button
         self.button_c2r1 = Button(self, image=self.button_imgDisagree, borderwidth=0, highlightthickness=0,
