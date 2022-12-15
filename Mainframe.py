@@ -86,17 +86,21 @@ class MainFrame(Tk):
             "ABM": {"Business Communication": "You can build relationships by carefully listening \n"
                                               "to others, has a good judgement, and confident to \n"
                                               "speak clearly with your audience comfortably. ",
+
                     "Financial Management": " You are able to manage your perosonal finances and \n"
                                             "able to apply neccesary skills to spend your own money \n"
                                             "wisely.",
+
                     "Business": "You can think of opportunities to earn and able to \n"
                                 "lead a group that has the same goals."},
 
             "HUMSS": {"Communication": "You are confident to speak out your thoughts, and you \n"
                                        "can easily communicate and resonate with people easily. ",
+
                       "Creativity": "With the constant change in circumstances, you frequently \n"
                                     "come up with fresh (creative) solutions to specific difficulties, \n"
                                     "thus creatively expressing yourself in that way. ",
+
                       "Social and Cultural Awareness": "You have sensitivity and respect for differences among \n"
                                                        "people you interact with, thus, being willing to objectively \n"
                                                        "examine the values, beliefs, traditions, and perceptions \n"
@@ -105,18 +109,22 @@ class MainFrame(Tk):
             "ICT": {"Innovative": "You have the capacity to think critically about \n"
                                   "the best solution to a given problem and picture \n"
                                   "situations from several points of view. ",
+
                     "Computer": "You can utilize computers and other associated \n"
                                 "technologies because you have the knowledge and \n"
                                 "skills necessary.",
+
                     "Marketing and Video-Editing": "You can creatively create videos that entertain \n"
                                                    "audiences or have an interest to make videos that \n"
                                                    "captures people's attention."},
 
-            "GAS": {"Adaptability": "You seem uncertain and confused on what specific \n"
-                                    "path you would take and you still want to weigh \n"
-                                    "your options.",
+            "GAS": {"Adaptability": "You want to be as flexible as possible and gain \n"
+                                    "more general knowledge than specific ones in \n"
+                                    "various fields of interest",
+
                     "Presentation": "You like to communicate and create ideas to \n"
                                     "help other people.",
+
                     "Technical": "You are flexible enough to take any strand in \n"
                                  "Senior High School because of your eagerness to \n"
                                  "learn different subjects."}
