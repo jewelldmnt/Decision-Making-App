@@ -2,7 +2,7 @@
 
 This is a Python Tkinter application designed to help students who are undecided about which Senior High School (SHS) strand to pursue. By taking a personalized quiz, students receive a recommendation for the strand that best aligns with their interests, goals, and preferences.
 
-<img src="https://github.com/user-attachments/assets/4daef914-ff74-44a7-a9d7-3a1ae9a53530" alt="start page" width="400"/>
+<img src="https://github.com/user-attachments/assets/074eba46-6e5e-4fe0-9823-e925e9038d21" alt="start page" width="400"/>
 <img src="https://github.com/user-attachments/assets/a74e24ee-310e-4c95-9e00-40ad10fbe7e9" alt="home page" width="400"/>
 <img src="https://github.com/user-attachments/assets/f4794b8f-6cd2-446f-b7e2-1871067669d5" alt="about page" width="400"/>
 <img src="https://github.com/user-attachments/assets/3ac38cc4-bdf4-4831-b73e-0036a148f33d" alt="instruction page" width="400"/>
